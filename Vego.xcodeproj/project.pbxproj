@@ -22,6 +22,11 @@
 		B5CFC0851CF02D5B00CBA04D /* recipe.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0811CF02D5B00CBA04D /* recipe.png */; };
 		B5CFC0861CF02D5B00CBA04D /* restaurant2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0821CF02D5B00CBA04D /* restaurant2.png */; };
 		B5CFC0871CF02D5B00CBA04D /* voucher2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0831CF02D5B00CBA04D /* voucher2.png */; };
+		B5CFC08D1CF044A000CBA04D /* pledgeButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC08C1CF044A000CBA04D /* pledgeButton2.png */; };
+		B5CFC0A21CF0736000CBA04D /* co2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC09E1CF0736000CBA04D /* co2.png */; };
+		B5CFC0A31CF0736000CBA04D /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC09F1CF0736000CBA04D /* fish.png */; };
+		B5CFC0A41CF0736000CBA04D /* henF.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0A01CF0736000CBA04D /* henF.png */; };
+		B5CFC0A51CF0736000CBA04D /* plant.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0A11CF0736000CBA04D /* plant.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		B5CFC0811CF02D5B00CBA04D /* recipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recipe.png; sourceTree = "<group>"; };
 		B5CFC0821CF02D5B00CBA04D /* restaurant2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant2.png; sourceTree = "<group>"; };
 		B5CFC0831CF02D5B00CBA04D /* voucher2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voucher2.png; sourceTree = "<group>"; };
+		B5CFC08C1CF044A000CBA04D /* pledgeButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pledgeButton2.png; sourceTree = "<group>"; };
+		B5CFC09E1CF0736000CBA04D /* co2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = co2.png; sourceTree = "<group>"; };
+		B5CFC09F1CF0736000CBA04D /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
+		B5CFC0A01CF0736000CBA04D /* henF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = henF.png; sourceTree = "<group>"; };
+		B5CFC0A11CF0736000CBA04D /* plant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plant.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,12 +156,17 @@
 		B5CFC05F1CEF436D00CBA04D /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				B5CFC09E1CF0736000CBA04D /* co2.png */,
+				B5CFC09F1CF0736000CBA04D /* fish.png */,
+				B5CFC0A01CF0736000CBA04D /* henF.png */,
+				B5CFC0A11CF0736000CBA04D /* plant.png */,
 				B5CFC0801CF02D5B00CBA04D /* pledge.png */,
 				B5CFC0811CF02D5B00CBA04D /* recipe.png */,
 				B5CFC0821CF02D5B00CBA04D /* restaurant2.png */,
 				B5CFC0831CF02D5B00CBA04D /* voucher2.png */,
 				B5CFC0741CF00DDB00CBA04D /* profile.jpg */,
 				B5CFC0661CEF51D800CBA04D /* vegoLogin.png */,
+				B5CFC08C1CF044A000CBA04D /* pledgeButton2.png */,
 				B5CFC0641CEF486800CBA04D /* vego.png */,
 			);
 			name = pictures;
@@ -264,16 +279,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CFC0A31CF0736000CBA04D /* fish.png in Resources */,
 				B5CFC03C1CEF419E00CBA04D /* LaunchScreen.storyboard in Resources */,
+				B5CFC0A51CF0736000CBA04D /* plant.png in Resources */,
 				B5CFC0751CF00DDB00CBA04D /* profile.jpg in Resources */,
 				B5CFC0651CEF486800CBA04D /* vego.png in Resources */,
+				B5CFC0A41CF0736000CBA04D /* henF.png in Resources */,
 				B5CFC0871CF02D5B00CBA04D /* voucher2.png in Resources */,
 				B5CFC0391CEF419E00CBA04D /* Assets.xcassets in Resources */,
 				B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */,
+				B5CFC0A21CF0736000CBA04D /* co2.png in Resources */,
 				B5CFC0851CF02D5B00CBA04D /* recipe.png in Resources */,
 				B5CFC0671CEF51D800CBA04D /* vegoLogin.png in Resources */,
 				B5CFC0861CF02D5B00CBA04D /* restaurant2.png in Resources */,
 				B5CFC0841CF02D5B00CBA04D /* pledge.png in Resources */,
+				B5CFC08D1CF044A000CBA04D /* pledgeButton2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
