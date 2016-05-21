@@ -15,6 +15,12 @@
 		B5CFC03C1CEF419E00CBA04D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC03A1CEF419E00CBA04D /* LaunchScreen.storyboard */; };
 		B5CFC0471CEF419E00CBA04D /* VegoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0461CEF419E00CBA04D /* VegoTests.swift */; };
 		B5CFC0521CEF419E00CBA04D /* VegoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0511CEF419E00CBA04D /* VegoUITests.swift */; };
+		B5CFC0631CEF43F100CBA04D /* IMG_7678.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0621CEF43F100CBA04D /* IMG_7678.JPG */; };
+		B5CFC0651CEF486800CBA04D /* vego.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0641CEF486800CBA04D /* vego.png */; };
+		B5CFC0671CEF51D800CBA04D /* vegoLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0661CEF51D800CBA04D /* vegoLogin.png */; };
+		B5CFC0711CEF6E0400CBA04D /* Facebook_logo-3.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC06E1CEF6E0400CBA04D /* Facebook_logo-3.png */; };
+		B5CFC0721CEF6E0400CBA04D /* GooglePlus-Logo-02-400x400.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC06F1CEF6E0400CBA04D /* GooglePlus-Logo-02-400x400.png */; };
+		B5CFC0731CEF6E0400CBA04D /* WECHAT-LOGO.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0701CEF6E0400CBA04D /* WECHAT-LOGO.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		B5CFC04D1CEF419E00CBA04D /* VegoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VegoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CFC0511CEF419E00CBA04D /* VegoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VegoUITests.swift; sourceTree = "<group>"; };
 		B5CFC0531CEF419E00CBA04D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5CFC0621CEF43F100CBA04D /* IMG_7678.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_7678.JPG; sourceTree = "<group>"; };
+		B5CFC0641CEF486800CBA04D /* vego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vego.png; sourceTree = "<group>"; };
+		B5CFC0661CEF51D800CBA04D /* vegoLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vegoLogin.png; sourceTree = "<group>"; };
+		B5CFC06E1CEF6E0400CBA04D /* Facebook_logo-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook_logo-3.png"; sourceTree = "<group>"; };
+		B5CFC06F1CEF6E0400CBA04D /* GooglePlus-Logo-02-400x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GooglePlus-Logo-02-400x400.png"; sourceTree = "<group>"; };
+		B5CFC0701CEF6E0400CBA04D /* WECHAT-LOGO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "WECHAT-LOGO.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 		B5CFC0221CEF419E00CBA04D = {
 			isa = PBXGroup;
 			children = (
+				B5CFC05F1CEF436D00CBA04D /* pictures */,
 				B5CFC02D1CEF419E00CBA04D /* Vego */,
 				B5CFC0451CEF419E00CBA04D /* VegoTests */,
 				B5CFC0501CEF419E00CBA04D /* VegoUITests */,
@@ -126,6 +139,19 @@
 				B5CFC0531CEF419E00CBA04D /* Info.plist */,
 			);
 			path = VegoUITests;
+			sourceTree = "<group>";
+		};
+		B5CFC05F1CEF436D00CBA04D /* pictures */ = {
+			isa = PBXGroup;
+			children = (
+				B5CFC0621CEF43F100CBA04D /* IMG_7678.JPG */,
+				B5CFC06E1CEF6E0400CBA04D /* Facebook_logo-3.png */,
+				B5CFC06F1CEF6E0400CBA04D /* GooglePlus-Logo-02-400x400.png */,
+				B5CFC0701CEF6E0400CBA04D /* WECHAT-LOGO.png */,
+				B5CFC0661CEF51D800CBA04D /* vegoLogin.png */,
+				B5CFC0641CEF486800CBA04D /* vego.png */,
+			);
+			name = pictures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +262,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CFC03C1CEF419E00CBA04D /* LaunchScreen.storyboard in Resources */,
+				B5CFC0711CEF6E0400CBA04D /* Facebook_logo-3.png in Resources */,
+				B5CFC0731CEF6E0400CBA04D /* WECHAT-LOGO.png in Resources */,
+				B5CFC0651CEF486800CBA04D /* vego.png in Resources */,
 				B5CFC0391CEF419E00CBA04D /* Assets.xcassets in Resources */,
+				B5CFC0721CEF6E0400CBA04D /* GooglePlus-Logo-02-400x400.png in Resources */,
 				B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */,
+				B5CFC0671CEF51D800CBA04D /* vegoLogin.png in Resources */,
+				B5CFC0631CEF43F100CBA04D /* IMG_7678.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
