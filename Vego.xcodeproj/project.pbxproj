@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0045898C1CF099DA001F8E91 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */; };
+		0045898E1CF0A061001F8E91 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */; };
+		004589901CF13B5F001F8E91 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898F1CF13B5F001F8E91 /* HomeViewController.swift */; };
+		004589921CF1852D001F8E91 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */; };
 		B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */; };
 		B5CFC0311CEF419E00CBA04D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0301CEF419E00CBA04D /* ViewController.swift */; };
 		B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0321CEF419E00CBA04D /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		0045898F1CF13B5F001F8E91 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		B5CFC02B1CEF419E00CBA04D /* Vego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CFC0301CEF419E00CBA04D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +139,10 @@
 				B5CFC03A1CEF419E00CBA04D /* LaunchScreen.storyboard */,
 				B5CFC03D1CEF419E00CBA04D /* Info.plist */,
 				B5CFC0351CEF419E00CBA04D /* Vego.xcdatamodeld */,
+				0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */,
+				0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */,
+				0045898F1CF13B5F001F8E91 /* HomeViewController.swift */,
+				004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */,
 			);
 			path = Vego;
 			sourceTree = "<group>";
@@ -318,9 +330,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0045898E1CF0A061001F8E91 /* RestaurantTableViewCell.swift in Sources */,
 				B5CFC0371CEF419E00CBA04D /* Vego.xcdatamodeld in Sources */,
 				B5CFC0311CEF419E00CBA04D /* ViewController.swift in Sources */,
+				0045898C1CF099DA001F8E91 /* RestaurantTableViewController.swift in Sources */,
 				B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */,
+				004589921CF1852D001F8E91 /* RestaurantDetailViewController.swift in Sources */,
+				004589901CF13B5F001F8E91 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Vego/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.Vego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -474,6 +491,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Vego/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.Vego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -545,6 +563,7 @@
 				B5CFC0581CEF419E00CBA04D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5CFC0591CEF419E00CBA04D /* Build configuration list for PBXNativeTarget "VegoTests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +572,7 @@
 				B5CFC05B1CEF419E00CBA04D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5CFC05C1CEF419E00CBA04D /* Build configuration list for PBXNativeTarget "VegoUITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +581,7 @@
 				B5CFC05E1CEF419E00CBA04D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
