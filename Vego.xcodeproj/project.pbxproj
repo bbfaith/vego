@@ -7,21 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B59622DB1CF178CC00973BC6 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622CF1CF178CC00973BC6 /* 01.png */; };
-		B59622DC1CF178CC00973BC6 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D01CF178CC00973BC6 /* 02.png */; };
-		B59622DD1CF178CC00973BC6 /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D11CF178CC00973BC6 /* 03.png */; };
-		B59622DE1CF178CC00973BC6 /* 04.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D21CF178CC00973BC6 /* 04.png */; };
-		B59622DF1CF178CC00973BC6 /* 05.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D31CF178CC00973BC6 /* 05.png */; };
-		B59622E01CF178CC00973BC6 /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D41CF178CC00973BC6 /* 06.png */; };
-		B59622E11CF178CC00973BC6 /* 07.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D51CF178CC00973BC6 /* 07.png */; };
-		B59622E21CF178CC00973BC6 /* 08.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D61CF178CC00973BC6 /* 08.png */; };
-		B59622E31CF178CC00973BC6 /* 09.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D71CF178CC00973BC6 /* 09.png */; };
-		B59622E41CF178CC00973BC6 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D81CF178CC00973BC6 /* 10.png */; };
-		B59622E51CF178CC00973BC6 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D91CF178CC00973BC6 /* 11.png */; };
-		B59622E61CF178CC00973BC6 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622DA1CF178CC00973BC6 /* 12.png */; };
-		B59622E81CF1791B00973BC6 /* daysF.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622E71CF1791B00973BC6 /* daysF.png */; };
-		B5B1FF311CF181840033EA09 /* newPledge.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1FF301CF181840033EA09 /* newPledge.png */; };
-		B5B1FF331CF183C60033EA09 /* submitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1FF321CF183C60033EA09 /* submitButton.png */; };
+		0045898C1CF099DA001F8E91 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */; };
+		0045898E1CF0A061001F8E91 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */; };
+		004589901CF13B5F001F8E91 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898F1CF13B5F001F8E91 /* HomeViewController.swift */; };
+		004589921CF1852D001F8E91 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */; };
 		B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */; };
 		B5CFC0311CEF419E00CBA04D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0301CEF419E00CBA04D /* ViewController.swift */; };
 		B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0321CEF419E00CBA04D /* Main.storyboard */; };
@@ -62,21 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B59622CF1CF178CC00973BC6 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
-		B59622D01CF178CC00973BC6 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
-		B59622D11CF178CC00973BC6 /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
-		B59622D21CF178CC00973BC6 /* 04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 04.png; sourceTree = "<group>"; };
-		B59622D31CF178CC00973BC6 /* 05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 05.png; sourceTree = "<group>"; };
-		B59622D41CF178CC00973BC6 /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
-		B59622D51CF178CC00973BC6 /* 07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 07.png; sourceTree = "<group>"; };
-		B59622D61CF178CC00973BC6 /* 08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 08.png; sourceTree = "<group>"; };
-		B59622D71CF178CC00973BC6 /* 09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 09.png; sourceTree = "<group>"; };
-		B59622D81CF178CC00973BC6 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
-		B59622D91CF178CC00973BC6 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
-		B59622DA1CF178CC00973BC6 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
-		B59622E71CF1791B00973BC6 /* daysF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daysF.png; sourceTree = "<group>"; };
-		B5B1FF301CF181840033EA09 /* newPledge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newPledge.png; sourceTree = "<group>"; };
-		B5B1FF321CF183C60033EA09 /* submitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitButton.png; sourceTree = "<group>"; };
+		0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
+		0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		0045898F1CF13B5F001F8E91 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		B5CFC02B1CEF419E00CBA04D /* Vego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CFC0301CEF419E00CBA04D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +139,10 @@
 				B5CFC03A1CEF419E00CBA04D /* LaunchScreen.storyboard */,
 				B5CFC03D1CEF419E00CBA04D /* Info.plist */,
 				B5CFC0351CEF419E00CBA04D /* Vego.xcdatamodeld */,
+				0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */,
+				0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */,
+				0045898F1CF13B5F001F8E91 /* HomeViewController.swift */,
+				004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */,
 			);
 			path = Vego;
 			sourceTree = "<group>";
@@ -410,9 +392,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0045898E1CF0A061001F8E91 /* RestaurantTableViewCell.swift in Sources */,
 				B5CFC0371CEF419E00CBA04D /* Vego.xcdatamodeld in Sources */,
 				B5CFC0311CEF419E00CBA04D /* ViewController.swift in Sources */,
+				0045898C1CF099DA001F8E91 /* RestaurantTableViewController.swift in Sources */,
 				B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */,
+				004589921CF1852D001F8E91 /* RestaurantDetailViewController.swift in Sources */,
+				004589901CF13B5F001F8E91 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +541,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Vego/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.Vego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -566,6 +553,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Vego/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.Vego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
