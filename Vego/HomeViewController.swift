@@ -1,29 +1,27 @@
 //
-//  HomeViewController.swift
+//  homeViewController.swift
 //  Vego
 //
-//  Created by Robin Lin on 21/05/2016.
+//  Created by Faith Ben on 22/05/2016.
 //  Copyright © 2016 Yanhong Ben. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class homeViewController: UIViewController {
 
     @IBOutlet weak var myPledgeButton: UIButton!
-    @IBOutlet weak var restaurantButton: UIButton!
     @IBOutlet weak var recipeButton: UIButton!
-    @IBOutlet weak var voucherButton: UIButton!
+    @IBOutlet weak var restaurantButton: UIButton!
+    @IBOutlet weak var signOutButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         myPledgeButton.imageView?.contentMode = .ScaleAspectFit
         recipeButton.imageView?.contentMode = .ScaleAspectFit
         restaurantButton.imageView?.contentMode = .ScaleAspectFit
-        voucherButton.imageView?.contentMode = .ScaleAspectFit
-        
-        
-        // Do any additional setup after loading the view.
+        signOutButton.imageView?.contentMode = .ScaleAspectFit
     }
 
     override func didReceiveMemoryWarning() {

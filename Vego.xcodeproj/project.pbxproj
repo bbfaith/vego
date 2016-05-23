@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B56BAD4E1CF1C6FE0094FCDE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BAD4D1CF1C6FE0094FCDE /* HomeViewController.swift */; };
+		B56BAD501CF1CE000094FCDE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56BAD4F1CF1CE000094FCDE /* MapKit.framework */; };
+		B56BAD571CF1D48E0094FCDE /* restaurantBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B56BAD561CF1D48E0094FCDE /* restaurantBkg.jpg */; };
+		B56BAD5B1CF1E5330094FCDE /* voucher.png in Resources */ = {isa = PBXBuildFile; fileRef = B56BAD5A1CF1E5330094FCDE /* voucher.png */; };
+		B56BAD5D1CF1E6FC0094FCDE /* VoucherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BAD5C1CF1E6FC0094FCDE /* VoucherTableViewController.swift */; };
+		B56BAD5F1CF1E9FB0094FCDE /* VoucherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BAD5E1CF1E9FB0094FCDE /* VoucherTableViewCell.swift */; };
+		B56BAD611CF281DC0094FCDE /* signout.png in Resources */ = {isa = PBXBuildFile; fileRef = B56BAD601CF281DC0094FCDE /* signout.png */; };
 		B59622DB1CF178CC00973BC6 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622CF1CF178CC00973BC6 /* 01.png */; };
 		B59622DC1CF178CC00973BC6 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D01CF178CC00973BC6 /* 02.png */; };
 		B59622DD1CF178CC00973BC6 /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D11CF178CC00973BC6 /* 03.png */; };
@@ -23,7 +30,7 @@
 		B5B1FF311CF181840033EA09 /* newPledge.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1FF301CF181840033EA09 /* newPledge.png */; };
 		B5B1FF331CF183C60033EA09 /* submitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1FF321CF183C60033EA09 /* submitButton.png */; };
 		B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */; };
-		B5CFC0311CEF419E00CBA04D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0301CEF419E00CBA04D /* ViewController.swift */; };
+		B5CFC0311CEF419E00CBA04D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0301CEF419E00CBA04D /* loginViewController.swift */; };
 		B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0321CEF419E00CBA04D /* Main.storyboard */; };
 		B5CFC0371CEF419E00CBA04D /* Vego.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0351CEF419E00CBA04D /* Vego.xcdatamodeld */; };
 		B5CFC0391CEF419E00CBA04D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0381CEF419E00CBA04D /* Assets.xcassets */; };
@@ -62,6 +69,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B56BAD4D1CF1C6FE0094FCDE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B56BAD4F1CF1CE000094FCDE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B56BAD561CF1D48E0094FCDE /* restaurantBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurantBkg.jpg; sourceTree = "<group>"; };
+		B56BAD5A1CF1E5330094FCDE /* voucher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voucher.png; sourceTree = "<group>"; };
+		B56BAD5C1CF1E6FC0094FCDE /* VoucherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherTableViewController.swift; sourceTree = "<group>"; };
+		B56BAD5E1CF1E9FB0094FCDE /* VoucherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherTableViewCell.swift; sourceTree = "<group>"; };
+		B56BAD601CF281DC0094FCDE /* signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signout.png; sourceTree = "<group>"; };
 		B59622CF1CF178CC00973BC6 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
 		B59622D01CF178CC00973BC6 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		B59622D11CF178CC00973BC6 /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
@@ -79,7 +93,7 @@
 		B5B1FF321CF183C60033EA09 /* submitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitButton.png; sourceTree = "<group>"; };
 		B5CFC02B1CEF419E00CBA04D /* Vego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5CFC0301CEF419E00CBA04D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B5CFC0301CEF419E00CBA04D /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		B5CFC0331CEF419E00CBA04D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5CFC0361CEF419E00CBA04D /* Vego.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Vego.xcdatamodel; sourceTree = "<group>"; };
 		B5CFC0381CEF419E00CBA04D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56BAD501CF1CE000094FCDE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,9 +145,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B56BAD511CF1D1B20094FCDE /* restaurantDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B56BAD561CF1D48E0094FCDE /* restaurantBkg.jpg */,
+				B56BAD5A1CF1E5330094FCDE /* voucher.png */,
+			);
+			name = restaurantDetail;
+			sourceTree = "<group>";
+		};
 		B5CFC0221CEF419E00CBA04D = {
 			isa = PBXGroup;
 			children = (
+				B56BAD4F1CF1CE000094FCDE /* MapKit.framework */,
 				B5CFC05F1CEF436D00CBA04D /* pictures */,
 				B5CFC02D1CEF419E00CBA04D /* Vego */,
 				B5CFC0451CEF419E00CBA04D /* VegoTests */,
@@ -155,16 +180,15 @@
 			isa = PBXGroup;
 			children = (
 				B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */,
-				B5CFC0301CEF419E00CBA04D /* ViewController.swift */,
+				B5CFC0301CEF419E00CBA04D /* loginViewController.swift */,
 				B5CFC0321CEF419E00CBA04D /* Main.storyboard */,
 				B5CFC0381CEF419E00CBA04D /* Assets.xcassets */,
 				B5CFC03A1CEF419E00CBA04D /* LaunchScreen.storyboard */,
 				B5CFC03D1CEF419E00CBA04D /* Info.plist */,
 				B5CFC0351CEF419E00CBA04D /* Vego.xcdatamodeld */,
-				0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */,
-				0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */,
-				0045898F1CF13B5F001F8E91 /* HomeViewController.swift */,
-				004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */,
+				B56BAD4D1CF1C6FE0094FCDE /* HomeViewController.swift */,
+				B56BAD5C1CF1E6FC0094FCDE /* VoucherTableViewController.swift */,
+				B56BAD5E1CF1E9FB0094FCDE /* VoucherTableViewCell.swift */,
 			);
 			path = Vego;
 			sourceTree = "<group>";
@@ -190,6 +214,7 @@
 		B5CFC05F1CEF436D00CBA04D /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				B56BAD511CF1D1B20094FCDE /* restaurantDetail */,
 				B5CFC0AE1CF1618B00CBA04D /* addPledgePage */,
 				B5CFC0C91CF1619F00CBA04D /* pledgePage */,
 				B5CFC0CA1CF161DA00CBA04D /* menuPage */,
@@ -234,6 +259,7 @@
 		B5CFC0CA1CF161DA00CBA04D /* menuPage */ = {
 			isa = PBXGroup;
 			children = (
+				B56BAD601CF281DC0094FCDE /* signout.png */,
 				B5CFC08C1CF044A000CBA04D /* pledgeButton2.png */,
 				B5CFC0801CF02D5B00CBA04D /* pledge.png */,
 				B5CFC0811CF02D5B00CBA04D /* recipe.png */,
@@ -377,14 +403,17 @@
 				B5CFC0651CEF486800CBA04D /* vego.png in Resources */,
 				B5CFC0871CF02D5B00CBA04D /* voucher2.png in Resources */,
 				B59622E61CF178CC00973BC6 /* 12.png in Resources */,
+				B56BAD571CF1D48E0094FCDE /* restaurantBkg.jpg in Resources */,
 				B5B1FF331CF183C60033EA09 /* submitButton.png in Resources */,
 				B5CFC0391CEF419E00CBA04D /* Assets.xcassets in Resources */,
 				B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */,
+				B56BAD611CF281DC0094FCDE /* signout.png in Resources */,
 				B5CFC0851CF02D5B00CBA04D /* recipe.png in Resources */,
 				B5CFC0671CEF51D800CBA04D /* vegoLogin.png in Resources */,
 				B59622E21CF178CC00973BC6 /* 08.png in Resources */,
 				B5CFC0861CF02D5B00CBA04D /* restaurant2.png in Resources */,
 				B5CFC0AD1CF0936F00CBA04D /* plant2.png in Resources */,
+				B56BAD5B1CF1E5330094FCDE /* voucher.png in Resources */,
 				B59622E81CF1791B00973BC6 /* daysF.png in Resources */,
 				B5CFC0841CF02D5B00CBA04D /* pledge.png in Resources */,
 				B59622E01CF178CC00973BC6 /* 06.png in Resources */,
@@ -414,13 +443,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0045898E1CF0A061001F8E91 /* RestaurantTableViewCell.swift in Sources */,
+				B56BAD5F1CF1E9FB0094FCDE /* VoucherTableViewCell.swift in Sources */,
 				B5CFC0371CEF419E00CBA04D /* Vego.xcdatamodeld in Sources */,
-				B5CFC0311CEF419E00CBA04D /* ViewController.swift in Sources */,
-				0045898C1CF099DA001F8E91 /* RestaurantTableViewController.swift in Sources */,
+				B56BAD5D1CF1E6FC0094FCDE /* VoucherTableViewController.swift in Sources */,
+				B5CFC0311CEF419E00CBA04D /* loginViewController.swift in Sources */,
 				B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */,
-				004589921CF1852D001F8E91 /* RestaurantDetailViewController.swift in Sources */,
-				004589901CF13B5F001F8E91 /* HomeViewController.swift in Sources */,
+				B56BAD4E1CF1C6FE0094FCDE /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
