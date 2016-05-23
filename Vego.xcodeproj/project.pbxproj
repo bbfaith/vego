@@ -29,6 +29,7 @@
 		B59622E81CF1791B00973BC6 /* daysF.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622E71CF1791B00973BC6 /* daysF.png */; };
 		B5B1FF311CF181840033EA09 /* newPledge.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1FF301CF181840033EA09 /* newPledge.png */; };
 		B5B1FF331CF183C60033EA09 /* submitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1FF321CF183C60033EA09 /* submitButton.png */; };
+		B5C393E51CF2A4B400900126 /* RecipeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C393E41CF2A4B400900126 /* RecipeDetailTableViewController.swift */; };
 		B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */; };
 		B5CFC0311CEF419E00CBA04D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0301CEF419E00CBA04D /* loginViewController.swift */; };
 		B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0321CEF419E00CBA04D /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 		B59622E71CF1791B00973BC6 /* daysF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daysF.png; sourceTree = "<group>"; };
 		B5B1FF301CF181840033EA09 /* newPledge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newPledge.png; sourceTree = "<group>"; };
 		B5B1FF321CF183C60033EA09 /* submitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitButton.png; sourceTree = "<group>"; };
+		B5C393E41CF2A4B400900126 /* RecipeDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailTableViewController.swift; sourceTree = "<group>"; };
 		B5CFC02B1CEF419E00CBA04D /* Vego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CFC0301CEF419E00CBA04D /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				B56BAD4D1CF1C6FE0094FCDE /* HomeViewController.swift */,
 				B56BAD5C1CF1E6FC0094FCDE /* VoucherTableViewController.swift */,
 				B56BAD5E1CF1E9FB0094FCDE /* VoucherTableViewCell.swift */,
+				B5C393E41CF2A4B400900126 /* RecipeDetailTableViewController.swift */,
 			);
 			path = Vego;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				B5CFC0311CEF419E00CBA04D /* loginViewController.swift in Sources */,
 				B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */,
 				B56BAD4E1CF1C6FE0094FCDE /* HomeViewController.swift in Sources */,
+				B5C393E51CF2A4B400900126 /* RecipeDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
