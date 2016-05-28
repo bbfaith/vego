@@ -1,27 +1,27 @@
 //
-//  VoucherTableViewController.swift
+//  RecipeListViewController.swift
 //  Vego
 //
-//  Created by Faith Ben on 22/05/2016.
+//  Created by Mu Lan on 21/05/2016.
 //  Copyright © 2016 Yanhong Ben. All rights reserved.
 //
 
 import UIKit
 
-class VoucherTableViewController: UITableViewController {
+class RecipeListViewController: UITableViewController {
 
-
+//    let cellSpacingHeight: CGFloat = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.reloadData()
-        
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -36,17 +36,16 @@ class VoucherTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 5
     }
-
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! VoucherTableViewCell
 
-        cell.nameLabel.text = "Top choice"
-        cell.expireDateLabel.text = "31 May 2016"
-        cell.discountLabel.text = "$10 OFF"
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! RecipeCell
+        
+        cell.recipeImage.image = UIImage(named: "recipe" + String(indexPath.row) + ".jpg")
+        cell.recipeName.text = "recipe" + String(indexPath.row)
+
         return cell
     }
  

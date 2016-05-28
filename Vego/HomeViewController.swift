@@ -13,6 +13,7 @@ class homeViewController: UIViewController {
     @IBOutlet weak var myPledgeButton: UIButton!
     @IBOutlet weak var recipeButton: UIButton!
     @IBOutlet weak var restaurantButton: UIButton!
+    @IBOutlet weak var checkInButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
     
     
@@ -21,7 +22,10 @@ class homeViewController: UIViewController {
         myPledgeButton.imageView?.contentMode = .ScaleAspectFit
         recipeButton.imageView?.contentMode = .ScaleAspectFit
         restaurantButton.imageView?.contentMode = .ScaleAspectFit
-        signOutButton.imageView?.contentMode = .ScaleAspectFit
+        checkInButton.imageView?.contentMode = .ScaleAspectFit
+        signOutButton.layer.cornerRadius = 8
+        signOutButton.layer.borderWidth = 1
+        signOutButton.layer.borderColor = UIColor.whiteColor().CGColor
     }
 
     override func didReceiveMemoryWarning() {

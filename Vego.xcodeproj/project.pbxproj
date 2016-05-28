@@ -10,26 +10,27 @@
 		B56BAD4E1CF1C6FE0094FCDE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BAD4D1CF1C6FE0094FCDE /* HomeViewController.swift */; };
 		B56BAD501CF1CE000094FCDE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56BAD4F1CF1CE000094FCDE /* MapKit.framework */; };
 		B56BAD571CF1D48E0094FCDE /* restaurantBkg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B56BAD561CF1D48E0094FCDE /* restaurantBkg.jpg */; };
-		B56BAD5B1CF1E5330094FCDE /* voucher.png in Resources */ = {isa = PBXBuildFile; fileRef = B56BAD5A1CF1E5330094FCDE /* voucher.png */; };
-		B56BAD5D1CF1E6FC0094FCDE /* VoucherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BAD5C1CF1E6FC0094FCDE /* VoucherTableViewController.swift */; };
-		B56BAD5F1CF1E9FB0094FCDE /* VoucherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56BAD5E1CF1E9FB0094FCDE /* VoucherTableViewCell.swift */; };
-		B56BAD611CF281DC0094FCDE /* signout.png in Resources */ = {isa = PBXBuildFile; fileRef = B56BAD601CF281DC0094FCDE /* signout.png */; };
 		B59622DB1CF178CC00973BC6 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622CF1CF178CC00973BC6 /* 01.png */; };
-		B59622DC1CF178CC00973BC6 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D01CF178CC00973BC6 /* 02.png */; };
-		B59622DD1CF178CC00973BC6 /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D11CF178CC00973BC6 /* 03.png */; };
-		B59622DE1CF178CC00973BC6 /* 04.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D21CF178CC00973BC6 /* 04.png */; };
-		B59622DF1CF178CC00973BC6 /* 05.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D31CF178CC00973BC6 /* 05.png */; };
-		B59622E01CF178CC00973BC6 /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D41CF178CC00973BC6 /* 06.png */; };
-		B59622E11CF178CC00973BC6 /* 07.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D51CF178CC00973BC6 /* 07.png */; };
-		B59622E21CF178CC00973BC6 /* 08.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D61CF178CC00973BC6 /* 08.png */; };
-		B59622E31CF178CC00973BC6 /* 09.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D71CF178CC00973BC6 /* 09.png */; };
-		B59622E41CF178CC00973BC6 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D81CF178CC00973BC6 /* 10.png */; };
-		B59622E51CF178CC00973BC6 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622D91CF178CC00973BC6 /* 11.png */; };
-		B59622E61CF178CC00973BC6 /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622DA1CF178CC00973BC6 /* 12.png */; };
-		B59622E81CF1791B00973BC6 /* daysF.png in Resources */ = {isa = PBXBuildFile; fileRef = B59622E71CF1791B00973BC6 /* daysF.png */; };
 		B5B1FF311CF181840033EA09 /* newPledge.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1FF301CF181840033EA09 /* newPledge.png */; };
 		B5B1FF331CF183C60033EA09 /* submitButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B1FF321CF183C60033EA09 /* submitButton.png */; };
 		B5C393E51CF2A4B400900126 /* RecipeDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C393E41CF2A4B400900126 /* RecipeDetailTableViewController.swift */; };
+		B5C393EB1CF2AB2300900126 /* PledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C393EA1CF2AB2300900126 /* PledgeViewController.swift */; };
+		B5C393F11CF2BFF700900126 /* recipe-default-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5C393F01CF2BFF700900126 /* recipe-default-image.jpg */; };
+		B5C393F51CF2E7FB00900126 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C393F41CF2E7FB00900126 /* SignUpViewController.swift */; };
+		B5C394041CF31ED000900126 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C394021CF31ED000900126 /* RecipeCell.swift */; };
+		B5C394051CF31ED100900126 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C394031CF31ED000900126 /* RecipeListViewController.swift */; };
+		B5C394071CF31FCB00900126 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C394061CF31FCB00900126 /* TextField.swift */; };
+		B5C3940A1CF3207200900126 /* psw.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C394081CF3207200900126 /* psw.png */; };
+		B5C3940B1CF3207200900126 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C394091CF3207200900126 /* user.png */; };
+		B5C394111CF320EC00900126 /* recipe0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5C3940C1CF320EC00900126 /* recipe0.jpg */; };
+		B5C394121CF320EC00900126 /* recipe1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5C3940D1CF320EC00900126 /* recipe1.jpg */; };
+		B5C394131CF320EC00900126 /* recipe2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5C3940E1CF320EC00900126 /* recipe2.jpg */; };
+		B5C394141CF320EC00900126 /* recipe3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5C3940F1CF320EC00900126 /* recipe3.jpg */; };
+		B5C394151CF320EC00900126 /* recipe4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5C394101CF320EC00900126 /* recipe4.jpg */; };
+		B5C3941A1CF325A700900126 /* checkIn.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C394161CF325A700900126 /* checkIn.png */; };
+		B5C3941B1CF325A700900126 /* myPledge.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C394171CF325A700900126 /* myPledge.png */; };
+		B5C3941C1CF325A700900126 /* recipe.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C394181CF325A700900126 /* recipe.png */; };
+		B5C3941D1CF325A700900126 /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = B5C394191CF325A700900126 /* restaurant.png */; };
 		B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */; };
 		B5CFC0311CEF419E00CBA04D /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0301CEF419E00CBA04D /* loginViewController.swift */; };
 		B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0321CEF419E00CBA04D /* Main.storyboard */; };
@@ -41,15 +42,24 @@
 		B5CFC0651CEF486800CBA04D /* vego.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0641CEF486800CBA04D /* vego.png */; };
 		B5CFC0671CEF51D800CBA04D /* vegoLogin.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0661CEF51D800CBA04D /* vegoLogin.png */; };
 		B5CFC0751CF00DDB00CBA04D /* profile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0741CF00DDB00CBA04D /* profile.jpg */; };
-		B5CFC0841CF02D5B00CBA04D /* pledge.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0801CF02D5B00CBA04D /* pledge.png */; };
-		B5CFC0851CF02D5B00CBA04D /* recipe.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0811CF02D5B00CBA04D /* recipe.png */; };
-		B5CFC0861CF02D5B00CBA04D /* restaurant2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0821CF02D5B00CBA04D /* restaurant2.png */; };
-		B5CFC0871CF02D5B00CBA04D /* voucher2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0831CF02D5B00CBA04D /* voucher2.png */; };
 		B5CFC08D1CF044A000CBA04D /* pledgeButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC08C1CF044A000CBA04D /* pledgeButton2.png */; };
 		B5CFC0AA1CF0936F00CBA04D /* co22.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0A61CF0936F00CBA04D /* co22.png */; };
 		B5CFC0AB1CF0936F00CBA04D /* fish2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0A71CF0936F00CBA04D /* fish2.png */; };
 		B5CFC0AC1CF0936F00CBA04D /* hen2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0A81CF0936F00CBA04D /* hen2.png */; };
 		B5CFC0AD1CF0936F00CBA04D /* plant2.png in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0A91CF0936F00CBA04D /* plant2.png */; };
+		B5D2499C1CF3ECAA00350B1B /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249911CF3ECAA00350B1B /* 02.png */; };
+		B5D2499D1CF3ECAA00350B1B /* 03.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249921CF3ECAA00350B1B /* 03.png */; };
+		B5D2499E1CF3ECAA00350B1B /* 04.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249931CF3ECAA00350B1B /* 04.png */; };
+		B5D2499F1CF3ECAA00350B1B /* 05.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249941CF3ECAA00350B1B /* 05.png */; };
+		B5D249A01CF3ECAA00350B1B /* 06.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249951CF3ECAA00350B1B /* 06.png */; };
+		B5D249A11CF3ECAA00350B1B /* 07.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249961CF3ECAA00350B1B /* 07.png */; };
+		B5D249A21CF3ECAA00350B1B /* 08.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249971CF3ECAA00350B1B /* 08.png */; };
+		B5D249A31CF3ECAA00350B1B /* 09.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249981CF3ECAA00350B1B /* 09.png */; };
+		B5D249A41CF3ECAA00350B1B /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249991CF3ECAA00350B1B /* 10.png */; };
+		B5D249A51CF3ECAA00350B1B /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D2499A1CF3ECAA00350B1B /* 11.png */; };
+		B5D249A61CF3ECAA00350B1B /* 12.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D2499B1CF3ECAA00350B1B /* 12.png */; };
+		B5D249A81CF3ED4600350B1B /* addPledgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D249A71CF3ED4600350B1B /* addPledgeViewController.swift */; };
+		B5D249AA1CF3EF1900350B1B /* daysF.png in Resources */ = {isa = PBXBuildFile; fileRef = B5D249A91CF3EF1900350B1B /* daysF.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,26 +83,27 @@
 		B56BAD4D1CF1C6FE0094FCDE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B56BAD4F1CF1CE000094FCDE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B56BAD561CF1D48E0094FCDE /* restaurantBkg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = restaurantBkg.jpg; sourceTree = "<group>"; };
-		B56BAD5A1CF1E5330094FCDE /* voucher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voucher.png; sourceTree = "<group>"; };
-		B56BAD5C1CF1E6FC0094FCDE /* VoucherTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherTableViewController.swift; sourceTree = "<group>"; };
-		B56BAD5E1CF1E9FB0094FCDE /* VoucherTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoucherTableViewCell.swift; sourceTree = "<group>"; };
-		B56BAD601CF281DC0094FCDE /* signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signout.png; sourceTree = "<group>"; };
 		B59622CF1CF178CC00973BC6 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
-		B59622D01CF178CC00973BC6 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
-		B59622D11CF178CC00973BC6 /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
-		B59622D21CF178CC00973BC6 /* 04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 04.png; sourceTree = "<group>"; };
-		B59622D31CF178CC00973BC6 /* 05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 05.png; sourceTree = "<group>"; };
-		B59622D41CF178CC00973BC6 /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
-		B59622D51CF178CC00973BC6 /* 07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 07.png; sourceTree = "<group>"; };
-		B59622D61CF178CC00973BC6 /* 08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 08.png; sourceTree = "<group>"; };
-		B59622D71CF178CC00973BC6 /* 09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 09.png; sourceTree = "<group>"; };
-		B59622D81CF178CC00973BC6 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
-		B59622D91CF178CC00973BC6 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
-		B59622DA1CF178CC00973BC6 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
-		B59622E71CF1791B00973BC6 /* daysF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daysF.png; sourceTree = "<group>"; };
 		B5B1FF301CF181840033EA09 /* newPledge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newPledge.png; sourceTree = "<group>"; };
 		B5B1FF321CF183C60033EA09 /* submitButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitButton.png; sourceTree = "<group>"; };
 		B5C393E41CF2A4B400900126 /* RecipeDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetailTableViewController.swift; sourceTree = "<group>"; };
+		B5C393EA1CF2AB2300900126 /* PledgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PledgeViewController.swift; sourceTree = "<group>"; };
+		B5C393F01CF2BFF700900126 /* recipe-default-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "recipe-default-image.jpg"; sourceTree = "<group>"; };
+		B5C393F41CF2E7FB00900126 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B5C394021CF31ED000900126 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeCell.swift; path = ../RecipeCell.swift; sourceTree = "<group>"; };
+		B5C394031CF31ED000900126 /* RecipeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeListViewController.swift; path = ../RecipeListViewController.swift; sourceTree = "<group>"; };
+		B5C394061CF31FCB00900126 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		B5C394081CF3207200900126 /* psw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = psw.png; sourceTree = "<group>"; };
+		B5C394091CF3207200900126 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		B5C3940C1CF320EC00900126 /* recipe0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe0.jpg; sourceTree = "<group>"; };
+		B5C3940D1CF320EC00900126 /* recipe1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe1.jpg; sourceTree = "<group>"; };
+		B5C3940E1CF320EC00900126 /* recipe2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe2.jpg; sourceTree = "<group>"; };
+		B5C3940F1CF320EC00900126 /* recipe3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe3.jpg; sourceTree = "<group>"; };
+		B5C394101CF320EC00900126 /* recipe4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = recipe4.jpg; sourceTree = "<group>"; };
+		B5C394161CF325A700900126 /* checkIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkIn.png; sourceTree = "<group>"; };
+		B5C394171CF325A700900126 /* myPledge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myPledge.png; sourceTree = "<group>"; };
+		B5C394181CF325A700900126 /* recipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recipe.png; sourceTree = "<group>"; };
+		B5C394191CF325A700900126 /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
 		B5CFC02B1CEF419E00CBA04D /* Vego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CFC0301CEF419E00CBA04D /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
@@ -110,15 +121,24 @@
 		B5CFC0641CEF486800CBA04D /* vego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vego.png; sourceTree = "<group>"; };
 		B5CFC0661CEF51D800CBA04D /* vegoLogin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vegoLogin.png; sourceTree = "<group>"; };
 		B5CFC0741CF00DDB00CBA04D /* profile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpg; sourceTree = "<group>"; };
-		B5CFC0801CF02D5B00CBA04D /* pledge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pledge.png; sourceTree = "<group>"; };
-		B5CFC0811CF02D5B00CBA04D /* recipe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recipe.png; sourceTree = "<group>"; };
-		B5CFC0821CF02D5B00CBA04D /* restaurant2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant2.png; sourceTree = "<group>"; };
-		B5CFC0831CF02D5B00CBA04D /* voucher2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voucher2.png; sourceTree = "<group>"; };
 		B5CFC08C1CF044A000CBA04D /* pledgeButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pledgeButton2.png; sourceTree = "<group>"; };
 		B5CFC0A61CF0936F00CBA04D /* co22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = co22.png; sourceTree = "<group>"; };
 		B5CFC0A71CF0936F00CBA04D /* fish2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish2.png; sourceTree = "<group>"; };
 		B5CFC0A81CF0936F00CBA04D /* hen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hen2.png; sourceTree = "<group>"; };
 		B5CFC0A91CF0936F00CBA04D /* plant2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plant2.png; sourceTree = "<group>"; };
+		B5D249911CF3ECAA00350B1B /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
+		B5D249921CF3ECAA00350B1B /* 03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 03.png; sourceTree = "<group>"; };
+		B5D249931CF3ECAA00350B1B /* 04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 04.png; sourceTree = "<group>"; };
+		B5D249941CF3ECAA00350B1B /* 05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 05.png; sourceTree = "<group>"; };
+		B5D249951CF3ECAA00350B1B /* 06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 06.png; sourceTree = "<group>"; };
+		B5D249961CF3ECAA00350B1B /* 07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 07.png; sourceTree = "<group>"; };
+		B5D249971CF3ECAA00350B1B /* 08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 08.png; sourceTree = "<group>"; };
+		B5D249981CF3ECAA00350B1B /* 09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 09.png; sourceTree = "<group>"; };
+		B5D249991CF3ECAA00350B1B /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		B5D2499A1CF3ECAA00350B1B /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
+		B5D2499B1CF3ECAA00350B1B /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
+		B5D249A71CF3ED4600350B1B /* addPledgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addPledgeViewController.swift; sourceTree = "<group>"; };
+		B5D249A91CF3EF1900350B1B /* daysF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = daysF.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +171,21 @@
 			isa = PBXGroup;
 			children = (
 				B56BAD561CF1D48E0094FCDE /* restaurantBkg.jpg */,
-				B56BAD5A1CF1E5330094FCDE /* voucher.png */,
 			);
 			name = restaurantDetail;
+			sourceTree = "<group>";
+		};
+		B5C393EC1CF2BFD100900126 /* recipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+				B5C3940C1CF320EC00900126 /* recipe0.jpg */,
+				B5C3940D1CF320EC00900126 /* recipe1.jpg */,
+				B5C3940E1CF320EC00900126 /* recipe2.jpg */,
+				B5C3940F1CF320EC00900126 /* recipe3.jpg */,
+				B5C394101CF320EC00900126 /* recipe4.jpg */,
+				B5C393F01CF2BFF700900126 /* recipe-default-image.jpg */,
+			);
+			name = recipeDetail;
 			sourceTree = "<group>";
 		};
 		B5CFC0221CEF419E00CBA04D = {
@@ -182,16 +214,20 @@
 			isa = PBXGroup;
 			children = (
 				B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */,
-				B5CFC0301CEF419E00CBA04D /* loginViewController.swift */,
 				B5CFC0321CEF419E00CBA04D /* Main.storyboard */,
 				B5CFC0381CEF419E00CBA04D /* Assets.xcassets */,
 				B5CFC03A1CEF419E00CBA04D /* LaunchScreen.storyboard */,
 				B5CFC03D1CEF419E00CBA04D /* Info.plist */,
 				B5CFC0351CEF419E00CBA04D /* Vego.xcdatamodeld */,
+				B5C394061CF31FCB00900126 /* TextField.swift */,
+				B5CFC0301CEF419E00CBA04D /* loginViewController.swift */,
 				B56BAD4D1CF1C6FE0094FCDE /* HomeViewController.swift */,
-				B56BAD5C1CF1E6FC0094FCDE /* VoucherTableViewController.swift */,
-				B56BAD5E1CF1E9FB0094FCDE /* VoucherTableViewCell.swift */,
+				B5C393EA1CF2AB2300900126 /* PledgeViewController.swift */,
+				B5C393F41CF2E7FB00900126 /* SignUpViewController.swift */,
 				B5C393E41CF2A4B400900126 /* RecipeDetailTableViewController.swift */,
+				B5C394031CF31ED000900126 /* RecipeListViewController.swift */,
+				B5C394021CF31ED000900126 /* RecipeCell.swift */,
+				B5D249A71CF3ED4600350B1B /* addPledgeViewController.swift */,
 			);
 			path = Vego;
 			sourceTree = "<group>";
@@ -217,6 +253,7 @@
 		B5CFC05F1CEF436D00CBA04D /* pictures */ = {
 			isa = PBXGroup;
 			children = (
+				B5C393EC1CF2BFD100900126 /* recipeDetail */,
 				B56BAD511CF1D1B20094FCDE /* restaurantDetail */,
 				B5CFC0AE1CF1618B00CBA04D /* addPledgePage */,
 				B5CFC0C91CF1619F00CBA04D /* pledgePage */,
@@ -230,19 +267,19 @@
 			isa = PBXGroup;
 			children = (
 				B5B1FF321CF183C60033EA09 /* submitButton.png */,
-				B59622E71CF1791B00973BC6 /* daysF.png */,
+				B5D249A91CF3EF1900350B1B /* daysF.png */,
+				B5D249911CF3ECAA00350B1B /* 02.png */,
+				B5D249921CF3ECAA00350B1B /* 03.png */,
+				B5D249931CF3ECAA00350B1B /* 04.png */,
+				B5D249941CF3ECAA00350B1B /* 05.png */,
+				B5D249951CF3ECAA00350B1B /* 06.png */,
+				B5D249961CF3ECAA00350B1B /* 07.png */,
+				B5D249971CF3ECAA00350B1B /* 08.png */,
+				B5D249981CF3ECAA00350B1B /* 09.png */,
+				B5D249991CF3ECAA00350B1B /* 10.png */,
+				B5D2499A1CF3ECAA00350B1B /* 11.png */,
+				B5D2499B1CF3ECAA00350B1B /* 12.png */,
 				B59622CF1CF178CC00973BC6 /* 01.png */,
-				B59622D01CF178CC00973BC6 /* 02.png */,
-				B59622D11CF178CC00973BC6 /* 03.png */,
-				B59622D21CF178CC00973BC6 /* 04.png */,
-				B59622D31CF178CC00973BC6 /* 05.png */,
-				B59622D41CF178CC00973BC6 /* 06.png */,
-				B59622D51CF178CC00973BC6 /* 07.png */,
-				B59622D61CF178CC00973BC6 /* 08.png */,
-				B59622D71CF178CC00973BC6 /* 09.png */,
-				B59622D81CF178CC00973BC6 /* 10.png */,
-				B59622D91CF178CC00973BC6 /* 11.png */,
-				B59622DA1CF178CC00973BC6 /* 12.png */,
 			);
 			name = addPledgePage;
 			sourceTree = "<group>";
@@ -262,12 +299,11 @@
 		B5CFC0CA1CF161DA00CBA04D /* menuPage */ = {
 			isa = PBXGroup;
 			children = (
-				B56BAD601CF281DC0094FCDE /* signout.png */,
+				B5C394161CF325A700900126 /* checkIn.png */,
+				B5C394171CF325A700900126 /* myPledge.png */,
+				B5C394181CF325A700900126 /* recipe.png */,
+				B5C394191CF325A700900126 /* restaurant.png */,
 				B5CFC08C1CF044A000CBA04D /* pledgeButton2.png */,
-				B5CFC0801CF02D5B00CBA04D /* pledge.png */,
-				B5CFC0811CF02D5B00CBA04D /* recipe.png */,
-				B5CFC0821CF02D5B00CBA04D /* restaurant2.png */,
-				B5CFC0831CF02D5B00CBA04D /* voucher2.png */,
 				B5CFC0741CF00DDB00CBA04D /* profile.jpg */,
 			);
 			name = menuPage;
@@ -276,6 +312,8 @@
 		B5CFC0CB1CF161ED00CBA04D /* loginPage */ = {
 			isa = PBXGroup;
 			children = (
+				B5C394081CF3207200900126 /* psw.png */,
+				B5C394091CF3207200900126 /* user.png */,
 				B5CFC0661CEF51D800CBA04D /* vegoLogin.png */,
 				B5CFC0641CEF486800CBA04D /* vego.png */,
 			);
@@ -389,39 +427,45 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B59622E41CF178CC00973BC6 /* 10.png in Resources */,
+				B5D249A61CF3ECAA00350B1B /* 12.png in Resources */,
 				B5CFC0AA1CF0936F00CBA04D /* co22.png in Resources */,
 				B59622DB1CF178CC00973BC6 /* 01.png in Resources */,
+				B5D249A41CF3ECAA00350B1B /* 10.png in Resources */,
+				B5D249A11CF3ECAA00350B1B /* 07.png in Resources */,
 				B5CFC0AC1CF0936F00CBA04D /* hen2.png in Resources */,
-				B59622E51CF178CC00973BC6 /* 11.png in Resources */,
+				B5C3940A1CF3207200900126 /* psw.png in Resources */,
 				B5B1FF311CF181840033EA09 /* newPledge.png in Resources */,
-				B59622DD1CF178CC00973BC6 /* 03.png in Resources */,
-				B59622E31CF178CC00973BC6 /* 09.png in Resources */,
-				B59622DE1CF178CC00973BC6 /* 04.png in Resources */,
 				B5CFC0AB1CF0936F00CBA04D /* fish2.png in Resources */,
-				B59622E11CF178CC00973BC6 /* 07.png in Resources */,
+				B5C3941B1CF325A700900126 /* myPledge.png in Resources */,
+				B5D249AA1CF3EF1900350B1B /* daysF.png in Resources */,
+				B5D2499E1CF3ECAA00350B1B /* 04.png in Resources */,
+				B5C3941D1CF325A700900126 /* restaurant.png in Resources */,
+				B5D249A31CF3ECAA00350B1B /* 09.png in Resources */,
+				B5C3940B1CF3207200900126 /* user.png in Resources */,
 				B5CFC03C1CEF419E00CBA04D /* LaunchScreen.storyboard in Resources */,
-				B59622DF1CF178CC00973BC6 /* 05.png in Resources */,
+				B5D2499D1CF3ECAA00350B1B /* 03.png in Resources */,
+				B5D2499C1CF3ECAA00350B1B /* 02.png in Resources */,
+				B5C394151CF320EC00900126 /* recipe4.jpg in Resources */,
 				B5CFC0751CF00DDB00CBA04D /* profile.jpg in Resources */,
 				B5CFC0651CEF486800CBA04D /* vego.png in Resources */,
-				B5CFC0871CF02D5B00CBA04D /* voucher2.png in Resources */,
-				B59622E61CF178CC00973BC6 /* 12.png in Resources */,
+				B5C394131CF320EC00900126 /* recipe2.jpg in Resources */,
 				B56BAD571CF1D48E0094FCDE /* restaurantBkg.jpg in Resources */,
 				B5B1FF331CF183C60033EA09 /* submitButton.png in Resources */,
+				B5D249A21CF3ECAA00350B1B /* 08.png in Resources */,
+				B5D249A01CF3ECAA00350B1B /* 06.png in Resources */,
+				B5C393F11CF2BFF700900126 /* recipe-default-image.jpg in Resources */,
+				B5C394111CF320EC00900126 /* recipe0.jpg in Resources */,
 				B5CFC0391CEF419E00CBA04D /* Assets.xcassets in Resources */,
+				B5D249A51CF3ECAA00350B1B /* 11.png in Resources */,
 				B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */,
-				B56BAD611CF281DC0094FCDE /* signout.png in Resources */,
-				B5CFC0851CF02D5B00CBA04D /* recipe.png in Resources */,
 				B5CFC0671CEF51D800CBA04D /* vegoLogin.png in Resources */,
-				B59622E21CF178CC00973BC6 /* 08.png in Resources */,
-				B5CFC0861CF02D5B00CBA04D /* restaurant2.png in Resources */,
+				B5C3941A1CF325A700900126 /* checkIn.png in Resources */,
 				B5CFC0AD1CF0936F00CBA04D /* plant2.png in Resources */,
-				B56BAD5B1CF1E5330094FCDE /* voucher.png in Resources */,
-				B59622E81CF1791B00973BC6 /* daysF.png in Resources */,
-				B5CFC0841CF02D5B00CBA04D /* pledge.png in Resources */,
-				B59622E01CF178CC00973BC6 /* 06.png in Resources */,
+				B5C3941C1CF325A700900126 /* recipe.png in Resources */,
+				B5C394121CF320EC00900126 /* recipe1.jpg in Resources */,
 				B5CFC08D1CF044A000CBA04D /* pledgeButton2.png in Resources */,
-				B59622DC1CF178CC00973BC6 /* 02.png in Resources */,
+				B5D2499F1CF3ECAA00350B1B /* 05.png in Resources */,
+				B5C394141CF320EC00900126 /* recipe3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,11 +490,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56BAD5F1CF1E9FB0094FCDE /* VoucherTableViewCell.swift in Sources */,
 				B5CFC0371CEF419E00CBA04D /* Vego.xcdatamodeld in Sources */,
-				B56BAD5D1CF1E6FC0094FCDE /* VoucherTableViewController.swift in Sources */,
+				B5D249A81CF3ED4600350B1B /* addPledgeViewController.swift in Sources */,
+				B5C393F51CF2E7FB00900126 /* SignUpViewController.swift in Sources */,
+				B5C394051CF31ED100900126 /* RecipeListViewController.swift in Sources */,
+				B5C394071CF31FCB00900126 /* TextField.swift in Sources */,
 				B5CFC0311CEF419E00CBA04D /* loginViewController.swift in Sources */,
+				B5C394041CF31ED000900126 /* RecipeCell.swift in Sources */,
 				B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */,
+				B5C393EB1CF2AB2300900126 /* PledgeViewController.swift in Sources */,
 				B56BAD4E1CF1C6FE0094FCDE /* HomeViewController.swift in Sources */,
 				B5C393E51CF2A4B400900126 /* RecipeDetailTableViewController.swift in Sources */,
 			);
@@ -594,11 +642,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Vego/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.Vego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -606,11 +657,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Vego/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.Vego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
