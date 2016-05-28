@@ -615,28 +615,28 @@
                             <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BNc-sZ-f1Q" userLabel="dayView">
                                 <rect key="frame" x="6" y="302" width="308" height="64"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B0Q-Ai-c8K">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="B0Q-Ai-c8K">
                                         <rect key="frame" x="0.0" y="0.0" width="1600" height="64"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsf-AD-0Fd">
+                                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsf-AD-0Fd">
                                                 <rect key="frame" x="0.0" y="0.0" width="400" height="64"/>
                                                 <state key="normal" title="1/4" backgroundImage="daysF.png">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjt-A5-T8p">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjt-A5-T8p">
                                                 <rect key="frame" x="400" y="0.0" width="400" height="64"/>
                                                 <state key="normal" title="1/2" backgroundImage="daysF.png">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsc-dd-bwN">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsc-dd-bwN">
                                                 <rect key="frame" x="800" y="0.0" width="400" height="64"/>
                                                 <state key="normal" title="3/4" backgroundImage="daysF.png">
                                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6c-MZ-sfJ">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S6c-MZ-sfJ">
                                                 <rect key="frame" x="1200" y="0.0" width="400" height="64"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="1" backgroundImage="daysF.png">
@@ -1109,7 +1109,7 @@
         <image name="plant2.png" width="166" height="275"/>
         <image name="profile.jpg" width="800" height="534"/>
         <image name="recipe-default-image.jpg" width="320" height="320"/>
-        <image name="recipe.png" width="415" height="415"/>
+        <image name="recipe.png" width="500" height="500"/>
         <image name="restaurant.png" width="415" height="415"/>
         <image name="restaurantBkg.jpg" width="2220" height="1481"/>
         <image name="submitButton.png" width="214" height="74"/>
