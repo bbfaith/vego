@@ -6,6 +6,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Unknown constraint types" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -272,16 +273,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wiy-BE-rA0">
                                 <rect key="frame" x="2" y="154" width="316" height="316"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PmM-Dk-YEV">
-                                        <rect key="frame" x="0.0" y="0.0" width="316" height="316"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PmM-Dk-YEV">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="561"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fR1-bV-cdI">
-                                                <rect key="frame" x="0.0" y="0.0" width="158" height="316"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fR1-bV-cdI">
+                                                <rect key="frame" x="0.0" y="0.0" width="280" height="561"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WzO-dM-5Tn" userLabel="hanView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="153"/>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WzO-dM-5Tn" userLabel="hanView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="276"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hen2.png" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-qY-puR">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="hen2.png" translatesAutoresizingMaskIntoConstraints="NO" id="l5V-qY-puR">
                                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="153"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="xz3-KS-M7Y">
@@ -293,19 +294,19 @@
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstItem="xz3-KS-M7Y" firstAttribute="centerX" secondItem="WzO-dM-5Tn" secondAttribute="centerX" id="17M-Iq-6FC"/>
-                                                            <constraint firstItem="xz3-KS-M7Y" firstAttribute="centerY" secondItem="WzO-dM-5Tn" secondAttribute="centerY" multiplier="0.5" constant="-1" id="M7G-tQ-jTR"/>
+                                                            <constraint firstAttribute="centerX" secondItem="WzO-dM-5Tn" secondAttribute="centerX" id="17M-Iq-6FC"/>
+                                                            <constraint firstAttribute="centerY" secondItem="WzO-dM-5Tn" secondAttribute="centerY" multiplier="0.5" constant="-1" id="M7G-tQ-jTR"/>
                                                             <constraint firstItem="l5V-qY-puR" firstAttribute="leading" secondItem="WzO-dM-5Tn" secondAttribute="leading" id="iJ8-Va-Zjx"/>
                                                             <constraint firstItem="l5V-qY-puR" firstAttribute="top" secondItem="WzO-dM-5Tn" secondAttribute="top" id="qyh-4X-wax"/>
-                                                            <constraint firstItem="xz3-KS-M7Y" firstAttribute="top" secondItem="WzO-dM-5Tn" secondAttribute="top" constant="28" id="ss2-xS-ZJ0"/>
+                                                            <constraint firstAttribute="top" secondItem="WzO-dM-5Tn" secondAttribute="top" constant="28" id="ss2-xS-ZJ0"/>
                                                             <constraint firstItem="l5V-qY-puR" firstAttribute="trailing" secondItem="WzO-dM-5Tn" secondAttribute="trailing" id="wbP-nx-v0q"/>
                                                             <constraint firstItem="l5V-qY-puR" firstAttribute="bottom" secondItem="WzO-dM-5Tn" secondAttribute="bottom" id="zsT-E4-m7B"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjX-TF-eCw" userLabel="plantView">
-                                                        <rect key="frame" x="0.0" y="163" width="158" height="153"/>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jjX-TF-eCw" userLabel="plantView">
+                                                        <rect key="frame" x="0.0" y="286" width="280" height="275"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plant2.png" translatesAutoresizingMaskIntoConstraints="NO" id="4wm-3E-WJx">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="plant2.png" translatesAutoresizingMaskIntoConstraints="NO" id="4wm-3E-WJx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="153"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="u14-gf-4ys">
@@ -330,13 +331,13 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8eu-Ek-Jl2">
-                                                <rect key="frame" x="158" y="0.0" width="158" height="316"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8eu-Ek-Jl2">
+                                                <rect key="frame" x="280" y="0.0" width="280" height="561"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXt-Kg-ncQ" userLabel="co2View">
-                                                        <rect key="frame" x="0.0" y="0.0" width="158" height="153"/>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UXt-Kg-ncQ" userLabel="co2View">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="276"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="co22.png" translatesAutoresizingMaskIntoConstraints="NO" id="emj-Ng-6vU">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="co22.png" translatesAutoresizingMaskIntoConstraints="NO" id="emj-Ng-6vU">
                                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="153"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="L4Q-7J-xby">
@@ -359,10 +360,10 @@
                                                             <constraint firstItem="emj-Ng-6vU" firstAttribute="trailing" secondItem="UXt-Kg-ncQ" secondAttribute="trailing" id="pEY-Ug-Fxq"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rm8-we-qEh" userLabel="fishView">
-                                                        <rect key="frame" x="0.0" y="163" width="158" height="153"/>
+                                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rm8-we-qEh" userLabel="fishView">
+                                                        <rect key="frame" x="0.0" y="286" width="280" height="275"/>
                                                         <subviews>
-                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fish2.png" translatesAutoresizingMaskIntoConstraints="NO" id="0lc-Ee-aex">
+                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="fish2.png" translatesAutoresizingMaskIntoConstraints="NO" id="0lc-Ee-aex">
                                                                 <rect key="frame" x="0.0" y="0.0" width="158" height="153"/>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="Yfs-ju-H7O">
@@ -662,25 +663,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="4l4-nY-Pgo" firstAttribute="trailing" secondItem="5fv-YC-bUJ" secondAttribute="trailingMargin" constant="10" id="22q-95-Qe7"/>
-                            <constraint firstItem="UU9-S3-FZH" firstAttribute="centerX" secondItem="5fv-YC-bUJ" secondAttribute="centerX" id="4Ow-uA-6K9"/>
-                            <constraint firstItem="UU9-S3-FZH" firstAttribute="top" secondItem="JCj-me-9BK" secondAttribute="bottom" constant="47" id="7Di-wp-uUt"/>
-                            <constraint firstItem="4l4-nY-Pgo" firstAttribute="top" secondItem="fdO-yY-RVN" secondAttribute="bottom" constant="8" id="Hjp-ZM-EYz"/>
-                            <constraint firstItem="BNc-sZ-f1Q" firstAttribute="trailing" secondItem="5fv-YC-bUJ" secondAttribute="trailingMargin" constant="10" id="ZUy-ue-Ym1"/>
-                            <constraint firstItem="fdO-yY-RVN" firstAttribute="trailing" secondItem="5fv-YC-bUJ" secondAttribute="trailingMargin" constant="-59" id="ekE-0m-lIP"/>
-                            <constraint firstItem="0Ea-sD-rKl" firstAttribute="leading" secondItem="5fv-YC-bUJ" secondAttribute="leadingMargin" constant="45" id="ges-Cs-QsX"/>
-                            <constraint firstItem="BNc-sZ-f1Q" firstAttribute="leading" secondItem="5fv-YC-bUJ" secondAttribute="leadingMargin" constant="-10" id="gjo-ra-45K"/>
-                            <constraint firstItem="4l4-nY-Pgo" firstAttribute="leading" secondItem="5fv-YC-bUJ" secondAttribute="leadingMargin" constant="-10" id="i4v-LI-d27"/>
-                            <constraint firstItem="0Ea-sD-rKl" firstAttribute="centerY" secondItem="5fv-YC-bUJ" secondAttribute="centerY" id="mE6-Nf-6aQ"/>
-                            <constraint firstItem="0Ea-sD-rKl" firstAttribute="trailing" secondItem="5fv-YC-bUJ" secondAttribute="trailingMargin" constant="-45" id="mI7-jV-9ro"/>
-                            <constraint firstItem="JCj-me-9BK" firstAttribute="top" secondItem="BNc-sZ-f1Q" secondAttribute="bottom" constant="8" id="mLs-Pa-kHE"/>
-                            <constraint firstItem="fdO-yY-RVN" firstAttribute="leading" secondItem="5fv-YC-bUJ" secondAttribute="leadingMargin" constant="60" id="nXa-zc-JwM"/>
-                            <constraint firstItem="JCj-me-9BK" firstAttribute="leading" secondItem="5fv-YC-bUJ" secondAttribute="leadingMargin" constant="119" id="q8P-Br-f0Z"/>
-                            <constraint firstItem="fdO-yY-RVN" firstAttribute="top" secondItem="vL9-vX-hyM" secondAttribute="bottom" constant="38" id="qX7-sN-W1z"/>
-                            <constraint firstItem="JCj-me-9BK" firstAttribute="trailing" secondItem="5fv-YC-bUJ" secondAttribute="trailingMargin" constant="-119" id="rm7-i1-SWW"/>
-                            <constraint firstItem="BNc-sZ-f1Q" firstAttribute="top" secondItem="0Ea-sD-rKl" secondAttribute="bottom" constant="8" id="yla-lA-RnH"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -1119,7 +1101,6 @@
         <image name="12.png" width="400" height="400"/>
         <image name="checkIn.png" width="415" height="415"/>
         <image name="co22.png" width="166" height="275"/>
-        <image name="daysF.png" width="400" height="400"/>
         <image name="fish2.png" width="166" height="275"/>
         <image name="hen2.png" width="166" height="275"/>
         <image name="myPledge.png" width="415" height="415"/>
