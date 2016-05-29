@@ -9,22 +9,27 @@
 import Foundation
 
 class Restaurant {
+    
     // Basic info
     var name: String?
     var url: String?
+    
     // Location
     var address: String?
     var location: String?
     var latitude: String?
     var longitude: String?
+    
     // Detail info
     var cuisines: String?
     var price_range: Int?
     var average_cost_for_two: String?
     var currency: String?
+    
     // Image
     var thumbURL: String?
     var featuredImageURL: String?
+    
     // User rating
     var rating: String?
     var votes: String?

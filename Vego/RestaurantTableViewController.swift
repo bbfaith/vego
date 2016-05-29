@@ -23,6 +23,7 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     var restaurantData = [Restaurant]()
     
     var thumbImages = [Int: UIImage]()
+    
     // The API key
     let apiKey = "b4060070f6f00977bea3bb8e8743cd61"
     
@@ -46,24 +47,20 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
         lManager.delegate = self
         // Check internet connection first
         if Reachability.isConnectedToNetwork() == false {
-            print("no")
             self.errorImage.hidden = false
             self.errorImage.image = UIImage(named: "no_connection")
         } else {
             // Preserve selection between presentations
             self.clearsSelectionOnViewWillAppear = false
             // Retrieve data based on location
-            var status = CLLocationManager.authorizationStatus()
+            let status = CLLocationManager.authorizationStatus()
             if status == .NotDetermined {
                 lManager.requestWhenInUseAuthorization()
-            }
-            status = CLLocationManager.authorizationStatus()
-            if status == .AuthorizedWhenInUse {
+            } else if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
                 lManager.requestLocation()
             }
             performRequest(latitude,longitude: longitude)
         }
-        print("Done")
     }
 
     override func didReceiveMemoryWarning() {
@@ -110,6 +107,7 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     
     // MARK: - Json data retrive
     func  performRequest(latitude: String, longitude: String) {
+        print("\(latitude)+\(longitude)")
         // Create NASA api base URL using NSURLComponents
         let urlComponents = NSURLComponents(string: apiBaseURL)!
         
@@ -158,7 +156,7 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
                 }
                 // Fetch Json objects
                 var count = 0
-                print(json)
+//                print(json)
                 if let restaurantsJson = json?["restaurants"] as? [NSDictionary] {
                     for aData in restaurantsJson {
                         // Set each restaurant data asyncronously
@@ -188,11 +186,16 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
         }
     }
     
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             longitude = String(location.coordinate.longitude)
             latitude = String(location.coordinate.latitude)
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
+            manager.requestLocation()
         }
     }
     

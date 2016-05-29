@@ -20,7 +20,6 @@
 		00F9CC591CF866FF0025F757 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F9CC581CF866FF0025F757 /* Security.framework */; };
 		00F9CC5B1CF8670B0025F757 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F9CC5A1CF8670B0025F757 /* SystemConfiguration.framework */; };
 		00F9CC5D1CF8679E0025F757 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9CC5C1CF8679E0025F757 /* DataService.swift */; };
-		00F9CC5F1CF8680B0025F757 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9CC5E1CF8680B0025F757 /* Constants.swift */; };
 		00F9CC681CF87CE80025F757 /* recipe-default-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00F9CC621CF87CE80025F757 /* recipe-default-image.jpg */; };
 		00F9CC691CF87CE80025F757 /* recipe0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00F9CC631CF87CE80025F757 /* recipe0.jpg */; };
 		00F9CC6A1CF87CE80025F757 /* recipe1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00F9CC641CF87CE80025F757 /* recipe1.jpg */; };
@@ -66,6 +65,8 @@
 		00F9CCBD1CF88C6F0025F757 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F9CCB81CF88C6F0025F757 /* TextField.swift */; };
 		00F9CCBF1CF892500025F757 /* vego.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F9CCBE1CF892500025F757 /* vego.png */; };
 		00F9CCC11CF892670025F757 /* no_connection.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F9CCC01CF892670025F757 /* no_connection.png */; };
+		B5CBDFC11CFA6FE700216D8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CBDFC01CFA6FE700216D8F /* CoreLocation.framework */; };
+		B5CBDFC51CFA98D600216D8F /* FSCalendar in Resources */ = {isa = PBXBuildFile; fileRef = B5CBDFC41CFA98D600216D8F /* FSCalendar */; };
 		B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */; };
 		B5CFC0311CEF419E00CBA04D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CFC0301CEF419E00CBA04D /* LoginViewController.swift */; };
 		B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5CFC0321CEF419E00CBA04D /* Main.storyboard */; };
@@ -107,7 +108,6 @@
 		00F9CC581CF866FF0025F757 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		00F9CC5A1CF8670B0025F757 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		00F9CC5C1CF8679E0025F757 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		00F9CC5E1CF8680B0025F757 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00F9CC621CF87CE80025F757 /* recipe-default-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "recipe-default-image.jpg"; path = "Images/recipe-default-image.jpg"; sourceTree = "<group>"; };
 		00F9CC631CF87CE80025F757 /* recipe0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = recipe0.jpg; path = Images/recipe0.jpg; sourceTree = "<group>"; };
 		00F9CC641CF87CE80025F757 /* recipe1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = recipe1.jpg; path = Images/recipe1.jpg; sourceTree = "<group>"; };
@@ -153,6 +153,9 @@
 		00F9CCB81CF88C6F0025F757 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		00F9CCBE1CF892500025F757 /* vego.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = vego.png; path = Images/vego.png; sourceTree = "<group>"; };
 		00F9CCC01CF892670025F757 /* no_connection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_connection.png; path = Images/no_connection.png; sourceTree = "<group>"; };
+		B5CBDFC01CFA6FE700216D8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B5CBDFC41CFA98D600216D8F /* FSCalendar */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FSCalendar; sourceTree = "<group>"; };
+		B5CBDFC61CFA98F700216D8F /* Objc-Bridge-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Objc-Bridge-Header.h"; sourceTree = "<group>"; };
 		B5CFC02B1CEF419E00CBA04D /* Vego.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vego.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CFC02E1CEF419E00CBA04D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5CFC0301CEF419E00CBA04D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +177,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5CBDFC11CFA6FE700216D8F /* CoreLocation.framework in Frameworks */,
 				00F9CCB31CF88A370025F757 /* MapKit.framework in Frameworks */,
 				00F9CC5B1CF8670B0025F757 /* SystemConfiguration.framework in Frameworks */,
 				00F9CC591CF866FF0025F757 /* Security.framework in Frameworks */,
@@ -306,6 +310,9 @@
 		B5CFC0221CEF419E00CBA04D = {
 			isa = PBXGroup;
 			children = (
+				B5CBDFC61CFA98F700216D8F /* Objc-Bridge-Header.h */,
+				B5CBDFC41CFA98D600216D8F /* FSCalendar */,
+				B5CBDFC01CFA6FE700216D8F /* CoreLocation.framework */,
 				00F9CCB21CF88A370025F757 /* MapKit.framework */,
 				00F9CC601CF87CA00025F757 /* Pictures */,
 				00F9CC5A1CF8670B0025F757 /* SystemConfiguration.framework */,
@@ -347,13 +354,12 @@
 				B5CFC03D1CEF419E00CBA04D /* Info.plist */,
 				B5CFC0351CEF419E00CBA04D /* Vego.xcdatamodeld */,
 				0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */,
+				004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */,
 				0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */,
 				0045898F1CF13B5F001F8E91 /* HomeViewController.swift */,
-				004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */,
 				004589B31CF2C685001F8E91 /* Recability.swift */,
 				004589B71CF2E427001F8E91 /* Restaurant.swift */,
 				00F9CC5C1CF8679E0025F757 /* DataService.swift */,
-				00F9CC5E1CF8680B0025F757 /* Constants.swift */,
 			);
 			path = Vego;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				B5CFC0341CEF419E00CBA04D /* Main.storyboard in Resources */,
 				00F9CC971CF87D950025F757 /* newPledge.png in Resources */,
 				00F9CCBF1CF892500025F757 /* vego.png in Resources */,
+				B5CBDFC51CFA98D600216D8F /* FSCalendar in Resources */,
 				00F9CCA51CF87DEC0025F757 /* restaurant.png in Resources */,
 				00F9CC811CF87D640025F757 /* 02.png in Resources */,
 				00F9CC8A1CF87D640025F757 /* 11.png in Resources */,
@@ -551,7 +558,6 @@
 			files = (
 				0045898E1CF0A061001F8E91 /* RestaurantTableViewCell.swift in Sources */,
 				00F9CCBA1CF88C6F0025F757 /* PledgeViewController.swift in Sources */,
-				00F9CC5F1CF8680B0025F757 /* Constants.swift in Sources */,
 				00F9CCBD1CF88C6F0025F757 /* TextField.swift in Sources */,
 				B5CFC0371CEF419E00CBA04D /* Vego.xcdatamodeld in Sources */,
 				B5CFC0311CEF419E00CBA04D /* LoginViewController.swift in Sources */,
@@ -717,6 +723,7 @@
 				INFOPLIST_FILE = Vego/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.Vego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -736,6 +743,7 @@
 				INFOPLIST_FILE = Vego/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.Vego;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

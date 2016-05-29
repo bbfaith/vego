@@ -47,6 +47,15 @@ class LoginViewController: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(sender: UITextField) -> Bool {
+        if !emailField.text!.isEmpty && !passwordField.text!.isEmpty {
+            tryLogin(sender)
+            return true
+        } else {
+            return false
+        }
+    }
+    
     @IBAction func tryLogin(sender: AnyObject) {
         let email = emailField.text
         let password = passwordField.text

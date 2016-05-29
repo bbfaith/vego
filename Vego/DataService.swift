@@ -9,6 +9,8 @@
 import Foundation
 import Firebase
 
+let BASE_URL = "https://vego.firebaseio.com"
+
 class DataService {
     static let dataService = DataService()
     
@@ -32,6 +34,12 @@ class DataService {
         return currentUser!
     }
     
+    var PLEDGE_REF: Firebase {
+        let currentPledge = self.CURRENT_USER_REF.childByAppendingPath("pledge")
+        
+        return currentPledge!
+    }
+    
     func createNewAccount(uid: String, user: Dictionary<String, String>) {
         USER_REF.childByAppendingPath(uid).setValue(user)
     }
@@ -48,14 +56,63 @@ class DataService {
         let calendar = NSCalendar.currentCalendar()
         
         // Get end date
-        let endDateData = calendar.dateByAddingUnit(.Day, value: period, toDate: NSDate(), options: [])
+        let endDateData = calendar.dateByAddingUnit(.Day, value: period * 28, toDate: NSDate(), options: [])
         let endDate = dateFormatter.stringFromDate(endDateData!)
         
         let pledge: Dictionary<String, String> = [
             "period": String(period),
             "days": String(days),
+            "pledged_days": String(days),
             "start_date": startDate,
             "end_date": endDate]
         CURRENT_USER_REF.childByAppendingPath("pledge").setValue(pledge)
+    }
+    
+    func updatePledge(newPeriod: Int, newDays: Int, lastPledge: Dictionary<String, String>) {
+        let pledgedEndDateString = lastPledge["end_date"]!
+        let pledgedDays = Int(lastPledge["days"]!)!
+        let pledgedPeriod = Int(lastPledge["period"]!)!
+        let finalDays = newDays + pledgedDays
+        let finalPeriod = newPeriod + pledgedPeriod
+        
+        // Set and format of dates
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        // Get NSDates
+        let pledgedEndDate = dateFormatter.dateFromString(pledgedEndDateString)!
+        let currentDate = NSDate()
+        
+        // Get current calendar
+        let calendar = NSCalendar.currentCalendar()
+        
+        // If current date is earlier than pledged end date
+        if currentDate.compare(pledgedEndDate) == .OrderedAscending {
+            let endDate = calendar.dateByAddingUnit(.Day, value: finalPeriod * 28, toDate: pledgedEndDate, options: [])
+            let finalEndDateString = dateFormatter.stringFromDate(endDate!)
+            
+            // Update database
+            let pledge: Dictionary<String, String> = [
+                "period": String(finalPeriod),
+                "days": String(finalDays),
+                "pledged_days": String(finalDays),
+                "end_date": finalEndDateString]
+            CURRENT_USER_REF.childByAppendingPath("pledge").updateChildValues(pledge)
+        
+        } else {
+            let endDate = calendar.dateByAddingUnit(.Day, value: newPeriod * 28, toDate: currentDate, options: [])
+            let finalEndDateString = dateFormatter.stringFromDate(endDate!)
+            let startDateString = dateFormatter.stringFromDate(currentDate)
+            
+            // Update database
+            let pledge: Dictionary<String, String> = [
+                "period": String(pledgedPeriod),
+                "days": String(pledgedDays),
+                "pledged_days": String(finalDays),
+                "start_date": startDateString,
+                "end_date": finalEndDateString]
+            CURRENT_USER_REF.childByAppendingPath("pledge").updateChildValues(pledge)
+        }
+        
     }
 }
