@@ -28,7 +28,6 @@ class Restaurant {
     
     // Image
     var thumbURL: String?
-    var featuredImageURL: String?
     
     // User rating
     var rating: String?
@@ -50,8 +49,8 @@ class Restaurant {
             if let locality = location["locality"] as? String, city = location["city"] as? String {
                 self.location = locality + ", " + city
             }
-            latitude = aRestaurantJson["latitude"] as? String
-            longitude = aRestaurantJson["longitude"] as? String
+            latitude = location["latitude"] as? String
+            longitude = location["longitude"] as? String
         }
         cuisines = aRestaurantJson["cuisines"] as? String
         if let range = aRestaurantJson["price_range"] as? Int {
@@ -60,7 +59,6 @@ class Restaurant {
         average_cost_for_two = aRestaurantJson["average_cost_for_two"] as? String
         currency = aRestaurantJson["currency"] as? String
         thumbURL = aRestaurantJson["thumb"] as? String
-        featuredImageURL = aRestaurantJson["average_cost_for_two"] as? String
         if let userRating = aRestaurantJson["user_rating"] as? NSDictionary {
             rating = userRating["aggregate_rating"] as? String
             votes = userRating["votes"] as? String

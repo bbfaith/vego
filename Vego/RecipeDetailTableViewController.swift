@@ -11,16 +11,19 @@ import UIKit
 class RecipeDetailTableViewController: UITableViewController {
     @IBOutlet weak var recipeDefaultImage: UIImageView!
     @IBOutlet weak var recipeDetail: UILabel!
-
+    @IBOutlet weak var recipeSteps: UILabel!
+    
+    var detailString: String?
+    var stepsString: String?
+    var imageString: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        recipeDetail.text = "step 1"
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.estimatedRowHeight = 200.0
+        tableView.rowHeight = UITableViewAutomaticDimension
+        recipeDetail.text = detailString!
+        recipeSteps.text = stepsString!
+        recipeDefaultImage.image = UIImage(named: imageString!)
     }
 
     override func didReceiveMemoryWarning() {

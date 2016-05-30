@@ -22,8 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         thisDate.year = 2016
         thisDate.month = 05
         thisDate.day = 01
-        thisDate.hour = 10
-        thisDate.minute = 01
+        thisDate.hour = 04
+        thisDate.minute = 02
         thisDate.timeZone = NSTimeZone.systemTimeZone()
         
         let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!

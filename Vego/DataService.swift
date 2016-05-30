@@ -40,6 +40,12 @@ class DataService {
         return currentPledge!
     }
     
+    var DATES_REF: Firebase {
+        let currentPledge = self.CURRENT_USER_REF.childByAppendingPath("pledge")
+        
+        return currentPledge!
+    }
+    
     func createNewAccount(uid: String, user: Dictionary<String, String>) {
         USER_REF.childByAppendingPath(uid).setValue(user)
     }
@@ -113,6 +119,16 @@ class DataService {
                 "end_date": finalEndDateString]
             CURRENT_USER_REF.childByAppendingPath("pledge").updateChildValues(pledge)
         }
-        
+    }
+    
+    func updateCounter(newPledgeDays: Int) {
+        let COUNTER_REF = BASE_REF.childByAppendingPath("counter")
+        COUNTER_REF.observeSingleEventOfType(.Value, withBlock: {
+            snapshot in
+                let currentCountsString = snapshot.value as! String
+                let currentCounts = Int(currentCountsString)!
+                let newCounts = currentCounts + newPledgeDays
+                self.BASE_REF.updateChildValues(["counter": "\(newCounts)"])
+        })
     }
 }

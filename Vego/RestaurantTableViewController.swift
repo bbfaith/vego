@@ -14,9 +14,9 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
 
     @IBOutlet weak var errorImage: UIImageView!
     
-    var latitude = "-34.433333"
+    var latitude = "-34.40073"
     
-    var longitude = "150.883333"
+    var longitude = "150.89125"
     
     let lManager = CLLocationManager()
     
@@ -45,6 +45,7 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         lManager.delegate = self
+        lManager.desiredAccuracy = kCLLocationAccuracyBest
         // Check internet connection first
         if Reachability.isConnectedToNetwork() == false {
             self.errorImage.hidden = false
@@ -57,12 +58,40 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
             if status == .NotDetermined {
                 lManager.requestWhenInUseAuthorization()
             } else if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
-                lManager.requestLocation()
+                lManager.startUpdatingLocation()
+            } else {
+                performRequest(latitude,longitude: longitude)
             }
-            performRequest(latitude,longitude: longitude)
         }
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        animateTable()
+    }
+    
+    func animateTable() {
+        tableView.reloadData()
+        
+        let cells = tableView.visibleCells
+        let tableHeight: CGFloat = tableView.bounds.size.height
+        
+        for i in cells {
+            let cell: UITableViewCell = i as UITableViewCell
+            cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
+        }
+        
+        var index = 0
+        
+        for a in cells {
+            let cell: UITableViewCell = a as UITableViewCell
+            UIView.animateWithDuration(1.5, delay: 0.05 * Double(index), usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .TransitionNone, animations: {
+                cell.transform = CGAffineTransformMakeTranslation(0, 0);
+                }, completion: nil)
+            
+            index += 1
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -107,7 +136,6 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     
     // MARK: - Json data retrive
     func  performRequest(latitude: String, longitude: String) {
-        print("\(latitude)+\(longitude)")
         // Create NASA api base URL using NSURLComponents
         let urlComponents = NSURLComponents(string: apiBaseURL)!
         
@@ -156,7 +184,6 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
                 }
                 // Fetch Json objects
                 var count = 0
-//                print(json)
                 if let restaurantsJson = json?["restaurants"] as? [NSDictionary] {
                     for aData in restaurantsJson {
                         // Set each restaurant data asyncronously
@@ -187,15 +214,17 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     }
     
     func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
+        if let location = locations.last {
             longitude = String(location.coordinate.longitude)
             latitude = String(location.coordinate.latitude)
         }
+        self.lManager.stopUpdatingLocation()
+        performRequest(latitude,longitude: longitude)
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .AuthorizedAlways || status == .AuthorizedWhenInUse {
-            manager.requestLocation()
+            self.lManager.startUpdatingLocation()
         }
     }
     
@@ -207,8 +236,12 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let destination = segue.destinationViewController as? RestaurantDetailViewController {
+            let rowIndex = self.tableView.indexPathForSelectedRow?.row
+            destination.restaurant = self.restaurantData[rowIndex!]
+            destination.latitude = self.latitude
+            destination.longitude = self.longitude
+        }
     }
     
 

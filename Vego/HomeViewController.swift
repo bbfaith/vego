@@ -26,8 +26,29 @@ class HomeViewController: UIViewController {
         signOutButton.layer.borderWidth = 1
         signOutButton.layer.borderColor = UIColor.whiteColor().CGColor
         
-        
-        // Do any additional setup after loading the view.
+        for index in 1...7 {
+            let digitLabel = self.view.viewWithTag(index) as! UILabel
+            digitLabel.layer.cornerRadius = 5
+        }
+        displayCounter()
+    }
+    
+    func displayCounter() {
+        let COUNTER_REF = DataService.dataService.BASE_REF.childByAppendingPath("counter")
+        COUNTER_REF.observeEventType(.Value, withBlock: {
+            snapshot in
+            let countString = snapshot.value as! String
+            var count = Int(countString)!
+            for index in 1...7 {
+                let digitLabel = self.view.viewWithTag(index) as? UILabel
+                if count != 0 {
+                    digitLabel!.text = String(count % 10)
+                    count /= 10
+                } else {
+                    digitLabel!.text = "0"
+                }
+            }
+        })
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var emailField: TextField!
@@ -17,6 +17,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailField.delegate = self
+        passwordField.delegate = self
+        
         signInButton.layer.cornerRadius = 5
         signInButton.layer.borderWidth = 0.5
         signInButton.layer.borderColor = UIColor.whiteColor().CGColor
@@ -50,8 +53,10 @@ class LoginViewController: UIViewController {
     func textFieldShouldReturn(sender: UITextField) -> Bool {
         if !emailField.text!.isEmpty && !passwordField.text!.isEmpty {
             tryLogin(sender)
+            sender.resignFirstResponder()
             return true
         } else {
+            sender.resignFirstResponder()
             return false
         }
     }

@@ -80,11 +80,11 @@ class AddPledgeViewController: UIViewController {
         if let m = months, d = days {
             if let pledge = self.pledge {
                 DataService.dataService.updatePledge(m, newDays: d, lastPledge: pledge)
-                self.addedPledgeAlert()
             } else {
                 DataService.dataService.createNewPledge(m, days: d)
-                self.addedPledgeAlert()
             }
+            DataService.dataService.updateCounter(d)
+            self.addedPledgeAlert()
         } else {
             self.addPledgeAlert("Oops!", message: "Please select perid and days first")
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var usernameField: UITextField!
@@ -18,6 +18,10 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailField.delegate = self
+        usernameField.delegate = self
+        passwordField.delegate = self
+        passwordConfirmField.delegate = self
         signUpButton.imageView?.contentMode = .ScaleAspectFit
     }
 
@@ -32,7 +36,7 @@ class SignUpViewController: UIViewController {
         let password = passwordField.text
         let passwordConfirm = passwordConfirmField.text
         
-        if username != "" && email != "" && password != "" {
+        if username != "" && email != "" && password != "" && passwordConfirm != "" {
             // If re-entered password does not match
             guard password == passwordConfirm else {
                 self.signupErrorAlert("Oops!", message: "The re-entered password doesn't match. Try again.")
@@ -67,6 +71,9 @@ class SignUpViewController: UIViewController {
                 }
             })
             
+        } else if password == passwordConfirm {
+            signupErrorAlert("Oops!", message: "The second password is different. Try again.")
+            
         } else {
             signupErrorAlert("Oops!", message: "Don't forget to enter your email, password, and a username.")
         }
@@ -80,6 +87,17 @@ class SignUpViewController: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
 
+    func textFieldShouldReturn(sender: UITextField) -> Bool {
+        if !emailField.text!.isEmpty && !passwordField.text!.isEmpty && !passwordConfirmField.text!.isEmpty && !usernameField.text!.isEmpty {
+            createAccount(sender)
+            sender.resignFirstResponder()
+            return true
+        } else {
+            sender.resignFirstResponder()
+            return false
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
