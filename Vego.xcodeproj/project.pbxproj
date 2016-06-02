@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0045898C1CF099DA001F8E91 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */; };
-		0045898E1CF0A061001F8E91 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */; };
+		0045898E1CF0A061001F8E91 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898D1CF0A061001F8E91 /* RestaurantCell.swift */; };
 		004589901CF13B5F001F8E91 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898F1CF13B5F001F8E91 /* HomeViewController.swift */; };
 		004589921CF1852D001F8E91 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */; };
 		004589B41CF2C685001F8E91 /* Recability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004589B31CF2C685001F8E91 /* Recability.swift */; };
@@ -62,11 +62,11 @@
 		00F9CCC11CF892670025F757 /* no_connection.png in Resources */ = {isa = PBXBuildFile; fileRef = 00F9CCC01CF892670025F757 /* no_connection.png */; };
 		B540DACA1CFAEBBC00B8E626 /* checkInLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B540DAC91CFAEBBC00B8E626 /* checkInLogo.png */; };
 		B540DACC1CFAEC2300B8E626 /* checkInBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B540DACB1CFAEC2300B8E626 /* checkInBG.jpg */; };
-		B540DACF1CFB28CA00B8E626 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540DACD1CFB28CA00B8E626 /* RecipeCell.swift */; };
 		B540DAD71CFB2AEF00B8E626 /* recipe1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B540DAD31CFB2AEF00B8E626 /* recipe1.jpg */; };
 		B540DAD81CFB2AEF00B8E626 /* recipe2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B540DAD41CFB2AEF00B8E626 /* recipe2.jpg */; };
 		B540DAD91CFB2AEF00B8E626 /* recipe0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B540DAD51CFB2AEF00B8E626 /* recipe0.jpg */; };
 		B540DADF1CFB2BC200B8E626 /* RecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B540DADE1CFB2BC200B8E626 /* RecipeTableViewController.swift */; };
+		B5687C511D00641C00B28524 /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5687C501D00641C00B28524 /* RecipeCell.swift */; };
 		B5CBDFC11CFA6FE700216D8F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CBDFC01CFA6FE700216D8F /* CoreLocation.framework */; };
 		B5CBDFDC1CFAA57800216D8F /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CBDFDB1CFAA57800216D8F /* CalendarViewController.swift */; };
 		B5CBDFFE1CFAA60000216D8F /* CALayer+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CBDFDF1CFAA60000216D8F /* CALayer+FSExtension.m */; };
@@ -115,7 +115,7 @@
 
 /* Begin PBXFileReference section */
 		0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
-		0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		0045898D1CF0A061001F8E91 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
 		0045898F1CF13B5F001F8E91 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		004589B31CF2C685001F8E91 /* Recability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recability.swift; sourceTree = "<group>"; };
@@ -169,11 +169,11 @@
 		00F9CCC01CF892670025F757 /* no_connection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = no_connection.png; path = Images/no_connection.png; sourceTree = "<group>"; };
 		B540DAC91CFAEBBC00B8E626 /* checkInLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkInLogo.png; sourceTree = "<group>"; };
 		B540DACB1CFAEC2300B8E626 /* checkInBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = checkInBG.jpg; sourceTree = "<group>"; };
-		B540DACD1CFB28CA00B8E626 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		B540DAD31CFB2AEF00B8E626 /* recipe1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = recipe1.jpg; path = Images/recipe1.jpg; sourceTree = "<group>"; };
 		B540DAD41CFB2AEF00B8E626 /* recipe2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = recipe2.jpg; path = Images/recipe2.jpg; sourceTree = "<group>"; };
 		B540DAD51CFB2AEF00B8E626 /* recipe0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = recipe0.jpg; path = Images/recipe0.jpg; sourceTree = "<group>"; };
 		B540DADE1CFB2BC200B8E626 /* RecipeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeTableViewController.swift; sourceTree = "<group>"; };
+		B5687C501D00641C00B28524 /* RecipeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		B5CBDFC01CFA6FE700216D8F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B5CBDFD21CFAA0BE00216D8F /* Objc-Bridge-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objc-Bridge-Header.h"; sourceTree = "<group>"; };
 		B5CBDFDB1CFAA57800216D8F /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -446,12 +446,12 @@
 				00F9CC5C1CF8679E0025F757 /* DataService.swift */,
 				0045898F1CF13B5F001F8E91 /* HomeViewController.swift */,
 				004589B31CF2C685001F8E91 /* Recability.swift */,
-				B540DACD1CFB28CA00B8E626 /* RecipeCell.swift */,
+				B5687C501D00641C00B28524 /* RecipeCell.swift */,
 				B540DADE1CFB2BC200B8E626 /* RecipeTableViewController.swift */,
 				00F9CCB61CF88C6F0025F757 /* RecipeDetailTableViewController.swift */,
-				004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */,
-				0045898D1CF0A061001F8E91 /* RestaurantTableViewCell.swift */,
 				0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */,
+				004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */,
+				0045898D1CF0A061001F8E91 /* RestaurantCell.swift */,
 				004589B71CF2E427001F8E91 /* Restaurant.swift */,
 				00F9CCB51CF88C6F0025F757 /* PledgeViewController.swift */,
 				00F9CCB71CF88C6F0025F757 /* SignUpViewController.swift */,
@@ -665,8 +665,7 @@
 				B5CBE0071CFAA60000216D8F /* FSCalendarConstance.m in Sources */,
 				B540DADF1CFB2BC200B8E626 /* RecipeTableViewController.swift in Sources */,
 				B5CBE0011CFAA60000216D8F /* FSCalendar+IBExtension.m in Sources */,
-				0045898E1CF0A061001F8E91 /* RestaurantTableViewCell.swift in Sources */,
-				B540DACF1CFB28CA00B8E626 /* RecipeCell.swift in Sources */,
+				0045898E1CF0A061001F8E91 /* RestaurantCell.swift in Sources */,
 				00F9CCBA1CF88C6F0025F757 /* PledgeViewController.swift in Sources */,
 				00F9CCBD1CF88C6F0025F757 /* TextField.swift in Sources */,
 				B5CBE0031CFAA60000216D8F /* FSCalendarAnimator.m in Sources */,
@@ -681,6 +680,7 @@
 				004589B41CF2C685001F8E91 /* Recability.swift in Sources */,
 				00F9CCBB1CF88C6F0025F757 /* RecipeDetailTableViewController.swift in Sources */,
 				B5CBE00B1CFAA60000216D8F /* FSCalendarScopeHandle.m in Sources */,
+				B5687C511D00641C00B28524 /* RecipeCell.swift in Sources */,
 				0045898C1CF099DA001F8E91 /* RestaurantTableViewController.swift in Sources */,
 				B5CFC02F1CEF419E00CBA04D /* AppDelegate.swift in Sources */,
 				00F9CCBC1CF88C6F0025F757 /* SignUpViewController.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RestaurantTableViewCell: UITableViewCell {
+class RestaurantCell: UITableViewCell {
     // MARK: Properties
 
     @IBOutlet weak var thumbnail: UIImageView!

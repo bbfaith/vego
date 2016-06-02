@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendarDelegate  {
     
-    var datesWCheckedIn : NSMutableArray = ["2016-04-01","2016-04-30","2016-05-01", "2016-05-31"]
+    var datesWCheckedIn : NSMutableArray = NSMutableArray()
     var count = 0
     
     @IBOutlet var monthInfo: UILabel!
@@ -20,29 +21,54 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     @IBOutlet var calendar: FSCalendar!
     
     @IBAction func sign(sender: AnyObject) {
+        // If the user already checked in today
         if(datesWCheckedIn.containsObject(calendar.stringFromDate(NSDate()))){
             let alert = UIAlertController(title: "Hey!", message: "You already checked today!", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler:nil))
             alert.view.setNeedsLayout()
             self.presentViewController(alert, animated: true, completion: nil)
         } else {
-            datesWCheckedIn.addObject(calendar.stringFromDate(NSDate()))
+            // Set and format of date
+            let currentDateString = calendar.stringFromDate(NSDate())
+            
+            // Update info on the view
+            datesWCheckedIn.addObject(currentDateString)
             dayInfo.text = "Well Done!"
             count += 1
-            monthInfo.text = "You checked " + (count as NSNumber).stringValue + " day this month!"
+            monthInfo.text = "You've checked " + String(count) + (count < 2 ? " day" : " days") + " this month!"
             self.calendar.reloadData()
+            
+            // Upload checked date to database
+            DataService.dataService.createDate(currentDateString)
         }
     }
     
     func fetchDates() {
-        
+        let DATES_REF = DataService.dataService.DATES_REF
+        DATES_REF.observeEventType(.Value, withBlock: {
+            snapshot in
+            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot] {
+                for snap in snapshots {
+                    if let dateKeyDictionary = snap.value as? Dictionary<String, AnyObject> {
+                        let dateString = dateKeyDictionary["date"] as! String
+                        print(dateString)
+                        self.datesWCheckedIn.addObject(dateString)
+                    }
+                }
+                // Update info on the view
+                self.calendar.reloadData()
+                self.countMonth(NSDate())
+                self.monthInfo.text = "You've checked " + String(self.count) + (self.count < 2 ? " day" : " days") + " this month!"
+            }
+        })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Fetch checked dates from database
+        fetchDates()
+        
         self.dayInfo.text = ""
-        countMonth(NSDate())
-        monthInfo.text = "You checked " + (count as NSNumber).stringValue + " day this month!"
     }
     
     func countMonth(nsdate : NSDate) {
@@ -54,7 +80,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         }
     }
     
-    func addDaystoGivenDate(baseDate:NSDate,NumberOfDaysToAdd:Int)->NSDate
+    func addDaystoGivenDate(baseDate:NSDate, NumberOfDaysToAdd:Int)->NSDate
     {
         let dateComponents = NSDateComponents()
         let CurrentCalendar = NSCalendar.currentCalendar()
@@ -66,14 +92,17 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         return newDate!
     }
     
+    // Set the minimum display day for the calendar
     func minimumDateForCalendar(calendar: FSCalendar) -> NSDate {
-        return calendar.dateWithYear(2016, month: 1, day: 1)
+        return calendar.dateWithYear(2016, month: 5, day: 30)
     }
     
+    // Set the maximum display day of the calendar
     func maximumDateForCalendar(calendar: FSCalendar) -> NSDate {
         return calendar.dateWithYear(2016, month: 12, day: 31)
     }
     
+    // Mark days every 5 days
     func calendar(calendar: FSCalendar, numberOfEventsForDate date: NSDate) -> Int {
         let day = calendar.dayOfDate(date)
         return day % 5 == 0 ? day/5 : 0;
@@ -92,7 +121,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
         if(datesWCheckedIn.containsObject(calendar.stringFromDate(date)))
         {
-            self.dayInfo.text = "Well Done!"
+            self.dayInfo.text = "A meat free day! Well Done!"
         } else {
             self.dayInfo.text = ""
         }

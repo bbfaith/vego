@@ -41,9 +41,9 @@ class DataService {
     }
     
     var DATES_REF: Firebase {
-        let currentPledge = self.CURRENT_USER_REF.childByAppendingPath("pledge")
+        let currentDates = self.PLEDGE_REF.childByAppendingPath("dates")
         
-        return currentPledge!
+        return currentDates!
     }
     
     func createNewAccount(uid: String, user: Dictionary<String, String>) {
@@ -74,6 +74,10 @@ class DataService {
         CURRENT_USER_REF.childByAppendingPath("pledge").setValue(pledge)
     }
     
+    func createDate(date: String) {
+        DATES_REF.childByAutoId().setValue(["date": date])
+    }
+    
     func updatePledge(newPeriod: Int, newDays: Int, lastPledge: Dictionary<String, String>) {
         let pledgedEndDateString = lastPledge["end_date"]!
         let pledgedDays = Int(lastPledge["days"]!)!
@@ -97,7 +101,7 @@ class DataService {
             let endDate = calendar.dateByAddingUnit(.Day, value: finalPeriod * 28, toDate: pledgedEndDate, options: [])
             let finalEndDateString = dateFormatter.stringFromDate(endDate!)
             
-            // Update database
+            // Update database without changing the start date
             let pledge: Dictionary<String, String> = [
                 "period": String(finalPeriod),
                 "days": String(finalDays),

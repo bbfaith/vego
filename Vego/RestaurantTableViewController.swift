@@ -24,6 +24,8 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     
     var thumbImages = [Int: UIImage]()
     
+    var indicator = UIActivityIndicatorView()
+    
     // The API key
     let apiKey = "b4060070f6f00977bea3bb8e8743cd61"
     
@@ -44,10 +46,14 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator()
+        
         lManager.delegate = self
         lManager.desiredAccuracy = kCLLocationAccuracyBest
+        
         // Check internet connection first
         if Reachability.isConnectedToNetwork() == false {
+            self.indicator.stopAnimating()
             self.errorImage.hidden = false
             self.errorImage.image = UIImage(named: "no_connection")
         } else {
@@ -67,6 +73,20 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     
     override func viewWillAppear(animated: Bool) {
         animateTable()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func activityIndicator() {
+        indicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 40, 40))
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.WhiteLarge
+        indicator.color = UIColor.grayColor()
+        indicator.center = self.tableView.center
+        indicator.hidesWhenStopped = true
+        self.view.addSubview(indicator)
+        indicator.startAnimating()
     }
     
     func animateTable() {
@@ -92,10 +112,6 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -108,7 +124,7 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("resCell", forIndexPath: indexPath) as! RestaurantTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("resCell", forIndexPath: indexPath) as! RestaurantCell
         let index = indexPath.row
         let aRestaurant = restaurantData[index]
 
@@ -126,10 +142,26 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
             let index = Int(Double(ratingString)!)
             cell.rating.backgroundColor = ratingColor[index]
         }
-        if let thumbImage = self.thumbImages[index] {
-            cell.thumbnail.image = thumbImage
+        
+        if let thumbnail = self.thumbImages[index] {
+            cell.thumbnail.image = thumbnail
         } else {
-            cell.thumbnail.image = UIImage(named: "res_avatar_120_1x_new")
+            let url = NSURL(string: aRestaurant.thumbURL!)
+            let session = NSURLSession.sharedSession()
+            let request = NSMutableURLRequest(URL: url!)
+            request.timeoutInterval = 10
+            let task = session.dataTaskWithRequest(request) {
+                (let data, let response, let error) in
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    if let data = data {
+                        let thumbnail = UIImage(data: data)
+                        cell.thumbnail.image = thumbnail
+                        self.thumbImages[index] = thumbnail
+                    }
+                }
+            }
+            task.resume()
         }
         return cell
     }
@@ -163,6 +195,9 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
             (data, response, error) -> Void in
             guard error == nil else {
                 print(error!)
+                self.errorImage.hidden = false
+                self.errorImage.image = UIImage(named: "no_connection")
+                self.indicator.stopAnimating()
                 return
             }
             // Get response from server
@@ -182,23 +217,22 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
                     print("Cannot load json correctly. error: \(error)")
                     return
                 }
-                // Fetch Json objects
+                
+                // Fetch Json objects asyncronously
                 var count = 0
-                if let restaurantsJson = json?["restaurants"] as? [NSDictionary] {
-                    for aData in restaurantsJson {
-                        // Set each restaurant data asyncronously
-                        dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                            let aRestaurantJson = aData["restaurant"] as! NSDictionary
-                            let aRestaurant = Restaurant(aRestaurantJson: aRestaurantJson)
-                            // Fetch thumbnail picture if it is not default one
-                            if let thumbURL = aRestaurant.thumbURL where thumbURL != "https://b.zmtcdn.com/images/res_avatar_120_1x_new.png" {
-                                self.fetchImage(count, urlString: thumbURL)
-                            }
-                            self.restaurantData.append(aRestaurant)
-                            count += 1
-                            self.tableView.reloadData()
+                dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                    if let restaurantsJson = json?["restaurants"] as? [NSDictionary] {
+                        for aData in restaurantsJson {
+                            // Set each restaurant data
+                                let aRestaurantJson = aData["restaurant"] as! NSDictionary
+                                let aRestaurant = Restaurant(aRestaurantJson: aRestaurantJson)
+                                self.restaurantData.append(aRestaurant)
+                                count += 1
                         }
                     }
+                    self.indicator.stopAnimating()
+                    self.tableView.reloadData()
+                    self.viewWillAppear(true)
                 }
             }
         }
