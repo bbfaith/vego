@@ -53,9 +53,15 @@ class AddPledgeViewController: UIViewController {
         // Enable day buttons
         var multiply = 1
         for dayButton in dayButtons {
-            let text = String(7 * months! * multiply)
-            dayButton.setTitle(text, forState: .Normal)
-            dayButton.enabled = true
+            
+            dayButton.alpha = 0
+            UIView.animateWithDuration(0.5, animations: {
+                dayButton.alpha = 1.0
+
+                let text = String(7 * self.months! * multiply)
+                dayButton.setTitle(text, forState: .Normal)
+                dayButton.enabled = true
+            })
             multiply += 1
         }
     }

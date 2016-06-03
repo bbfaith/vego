@@ -71,12 +71,13 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        animateTable()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - Animate list
+    override func viewWillAppear(animated: Bool) {
+        animateTable()
     }
     
     func activityIndicator() {

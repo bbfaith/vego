@@ -1105,7 +1105,7 @@
                             <tableViewSection id="HbX-Bs-ufO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="320" id="cPU-0X-9jI">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
+                                        <rect key="frame" x="0.0" y="64" width="320" height="320"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cPU-0X-9jI" id="jeN-SE-gNh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="319.5"/>
@@ -1146,7 +1146,7 @@
                             <tableViewSection headerTitle="Ingredients" id="xba-YI-cVT">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="0.0" id="Lm5-Xs-EcC">
-                                        <rect key="frame" x="0.0" y="348" width="320" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="412" width="320" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lm5-Xs-EcC" id="lBb-my-84W">
                                             <rect key="frame" x="0.0" y="-0.5" width="320" height="0.5"/>
@@ -1172,7 +1172,7 @@
                             <tableViewSection headerTitle="Instruction" id="NA3-fy-5IM">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="0.0" id="kM6-cj-dwp">
-                                        <rect key="frame" x="0.0" y="376" width="320" height="0.0"/>
+                                        <rect key="frame" x="0.0" y="440" width="320" height="0.0"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kM6-cj-dwp" id="gRZ-z1-xR9">
                                             <rect key="frame" x="0.0" y="-0.5" width="320" height="0.5"/>
@@ -1359,6 +1359,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="calendar" destination="puC-o9-rnx" id="I5f-KY-gam"/>
+                        <outlet property="checkInButton" destination="7ql-q5-jXS" id="Ijg-iT-Dei"/>
                         <outlet property="dayInfo" destination="wwf-2u-5sw" id="iwf-J0-51r"/>
                         <outlet property="monthInfo" destination="SsF-XN-VXk" id="ENc-wu-4Tc"/>
                     </connections>

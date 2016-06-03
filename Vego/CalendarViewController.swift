@@ -20,6 +20,8 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     @IBOutlet var calendar: FSCalendar!
     
+    @IBOutlet weak var checkInButton: UIButton!
+    
     @IBAction func sign(sender: AnyObject) {
         // If the user already checked in today
         if(datesWCheckedIn.containsObject(calendar.stringFromDate(NSDate()))){
@@ -51,7 +53,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 for snap in snapshots {
                     if let dateKeyDictionary = snap.value as? Dictionary<String, AnyObject> {
                         let dateString = dateKeyDictionary["date"] as! String
-                        print(dateString)
                         self.datesWCheckedIn.addObject(dateString)
                     }
                 }
@@ -59,6 +60,11 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 self.calendar.reloadData()
                 self.countMonth(NSDate())
                 self.monthInfo.text = "You've checked " + String(self.count) + (self.count < 2 ? " day" : " days") + " this month!"
+                
+                // If the user already checked in today
+                if(self.datesWCheckedIn.containsObject(self.calendar.stringFromDate(NSDate()))){
+                    self.checkInButton.enabled = false
+                }
             }
         })
     }
@@ -108,6 +114,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         return day % 5 == 0 ? day/5 : 0;
     }
     
+    // Count check-in days in this month
     func calendarCurrentPageDidChange(calendar: FSCalendar) {
         self.dayInfo.text = ""
         if(calendar.monthOfDate((calendar.currentPage)) > calendar.monthOfDate(NSDate())){
@@ -118,6 +125,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         }
     }
     
+    // Show status of a day
     func calendar(calendar: FSCalendar, didSelectDate date: NSDate) {
         if(datesWCheckedIn.containsObject(calendar.stringFromDate(date)))
         {
@@ -127,6 +135,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         }
     }
     
+    // Change a day's image
     func calendar(calendar: FSCalendar, imageForDate date: NSDate) -> UIImage? {
         let imageName = "veg" + String(arc4random_uniform(UInt32(31)) + 1)
         return datesWCheckedIn.containsObject(calendar.stringFromDate(date)) ? UIImage(named: imageName) : nil
