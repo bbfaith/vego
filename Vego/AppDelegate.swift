@@ -17,6 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil))
+        let thisDate = NSDateComponents()
+        thisDate.year = 2016
+        thisDate.month = 05
+        thisDate.day = 01
+        thisDate.hour = 04
+        thisDate.minute = 02
+        thisDate.timeZone = NSTimeZone.systemTimeZone()
+        
+        let calendar: NSCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let date: NSDate = calendar.dateFromComponents(thisDate)!
+        
+        let notification = UILocalNotification()
+        notification.alertAction = "Vego"
+        notification.alertBody = "Have you checked in today?"
+        notification.fireDate = date
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        notification.repeatInterval = NSCalendarUnit.Day
         return true
     }
 

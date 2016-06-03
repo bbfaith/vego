@@ -8,10 +8,20 @@
 
 import UIKit
 
-class RestaurantTableViewCell: UITableViewCell {
+class RestaurantCell: UITableViewCell {
+    // MARK: Properties
 
+    @IBOutlet weak var thumbnail: UIImageView!
+    @IBOutlet weak var location: UILabel!
+    @IBOutlet weak var cost: UILabel!
+    @IBOutlet weak var cuisines: UILabel!
+    @IBOutlet weak var rating: UILabel!
+    @IBOutlet weak var name: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        rating.layer.cornerRadius = 8.0
+        rating.clipsToBounds = true
         // Initialization code
     }
 
