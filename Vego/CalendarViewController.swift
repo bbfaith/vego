@@ -34,10 +34,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             let currentDateString = calendar.stringFromDate(NSDate())
             
             // Update info on the view
-            datesWCheckedIn.addObject(currentDateString)
             dayInfo.text = "Well Done!"
-            count += 1
-            monthInfo.text = "You've checked " + String(count) + (count < 2 ? " day" : " days") + " this month!"
             self.calendar.reloadData()
             
             // Upload checked date to database
@@ -58,6 +55,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 }
                 // Update info on the view
                 self.calendar.reloadData()
+                print(self.datesWCheckedIn)
                 self.countMonth(NSDate())
                 self.monthInfo.text = "You've checked " + String(self.count) + (self.count < 2 ? " day" : " days") + " this month!"
                 
@@ -73,7 +71,6 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         super.viewDidLoad()
         // Fetch checked dates from database
         fetchDates()
-        
         self.dayInfo.text = ""
     }
     
@@ -85,18 +82,7 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             }
         }
     }
-    
-    func addDaystoGivenDate(baseDate:NSDate, NumberOfDaysToAdd:Int)->NSDate
-    {
-        let dateComponents = NSDateComponents()
-        let CurrentCalendar = NSCalendar.currentCalendar()
-        let CalendarOption = NSCalendarOptions()
-        
-        dateComponents.day = NumberOfDaysToAdd
-        
-        let newDate = CurrentCalendar.dateByAddingComponents(dateComponents, toDate: baseDate, options: CalendarOption)
-        return newDate!
-    }
+
     
     // Set the minimum display day for the calendar
     func minimumDateForCalendar(calendar: FSCalendar) -> NSDate {

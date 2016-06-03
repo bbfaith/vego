@@ -143,21 +143,5 @@ class RecipeDetailTableViewController: UITableViewController {
         task.resume()
     }
     
-    func fetchImage(imgurl: String){
-        let url = NSURL(string: imgurl)
-        let session = NSURLSession.sharedSession()
-        let request = NSMutableURLRequest(URL: url!)
-        request.timeoutInterval = 20
-        
-        let task = session.dataTaskWithRequest(request) {
-            (let data, let response, let error) in
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                if let data = data {
-                    self.recipeDefaultImage.image = UIImage(data: data)
-                }
-            }
-        }
-        task.resume()
-    }
+
 }

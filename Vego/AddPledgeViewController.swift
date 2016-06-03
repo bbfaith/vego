@@ -45,6 +45,7 @@ class AddPledgeViewController: UIViewController {
                 monthButton.enabled = true
             }
         }
+        
         // Select the clicked button
         sender.selected = true
         sender.enabled = false
@@ -97,7 +98,6 @@ class AddPledgeViewController: UIViewController {
     }
     
     func addPledgeAlert(title: String, message: String) {
-        // Called upon login error to let the user know login didn't work.
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
         alert.addAction(action)
@@ -105,7 +105,6 @@ class AddPledgeViewController: UIViewController {
     }
     
     func addedPledgeAlert() {
-        // Called upon login error to let the user know login didn't work.
         let alert = UIAlertController(title: "Congrats!", message: "You've made a pledge.", preferredStyle: UIAlertControllerStyle.Alert)
         let action = UIAlertAction(title: "Ok", style: .Default, handler: {
             action in
