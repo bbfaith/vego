@@ -12,7 +12,7 @@ import Foundation
 class AddPledgeViewController: UIViewController {
 
     @IBOutlet var monthButtons: [UIButton]!
-    
+
     @IBOutlet var dayButtons: [UIButton]!
     
     var months: Int?
