@@ -46,7 +46,7 @@ class RecipeDetailTableViewController: UITableViewController {
     
     func requestRecipe(id: Int) {
         let url = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/" + String(id) + "/information"
-        print(url)
+//        print(url)
         let urlComponents = NSURLComponents(string: url)!
         
         let request = NSMutableURLRequest(URL: urlComponents.URL!)
@@ -72,7 +72,7 @@ class RecipeDetailTableViewController: UITableViewController {
                     if let data = data {
                         if let fetchedJson = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
                             if let get = fetchedJson["sourceUrl"] as! String?{
-                                print(get)
+//                                print(get)
                                 self.requestInstruction(get)
                             }
                         }
