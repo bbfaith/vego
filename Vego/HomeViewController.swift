@@ -57,25 +57,27 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func signOut(sender: AnyObject) {
-        // unauth() is the logout method for the current user.
-        DataService.dataService.CURRENT_USER_REF.unauth()
-        
-        // Remove the user's uid from storage.
-        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
-        
-        // Head back to Login!
-        let loginViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Login")
-        UIApplication.sharedApplication().keyWindow?.rootViewController = loginViewController
+        // Check internet connection first
+        if Reachability.isConnectedToNetwork() == false {
+            self.homeErrorAlert("Oops", message: "You need to connect to the internet first.")
+        } else {
+            // unauth() is the logout method for the current user.
+            DataService.dataService.CURRENT_USER_REF.unauth()
+            
+            // Remove the user's uid from storage.
+            NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
+            
+            // Head back to Login!
+            let loginViewController = self.storyboard!.instantiateViewControllerWithIdentifier("Login")
+            UIApplication.sharedApplication().keyWindow?.rootViewController = loginViewController
+        }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func homeErrorAlert(title: String, message: String) {
+        // Called upon signup error to let the user know signup didn't work.
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
     }
-    */
-
 }

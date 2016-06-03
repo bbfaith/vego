@@ -12,7 +12,7 @@ import Foundation
 class AddPledgeViewController: UIViewController {
 
     @IBOutlet var monthButtons: [UIButton]!
-
+    
     @IBOutlet var dayButtons: [UIButton]!
     
     var months: Int?
@@ -45,7 +45,6 @@ class AddPledgeViewController: UIViewController {
                 monthButton.enabled = true
             }
         }
-        
         // Select the clicked button
         sender.selected = true
         sender.enabled = false
@@ -84,16 +83,22 @@ class AddPledgeViewController: UIViewController {
 
     
     @IBAction func addPledge(sender: UIButton) {
-        if let m = months, d = days {
-            if let pledge = self.pledge {
-                DataService.dataService.updatePledge(m, newDays: d, lastPledge: pledge)
-            } else {
-                DataService.dataService.createNewPledge(m, days: d)
-            }
-            DataService.dataService.updateCounter(d)
-            self.addedPledgeAlert()
+        // Check if connected to the internet
+        if Reachability.isConnectedToNetwork() == false {
+            self.addPledgeAlert("Oops", message: "You are not connected to the internet. Failed to pledge.")
         } else {
-            self.addPledgeAlert("Oops!", message: "Please select perid and days first")
+            // Add pledge
+            if let m = months, d = days {
+                if let pledge = self.pledge {
+                    DataService.dataService.updatePledge(m, newDays: d, lastPledge: pledge)
+                } else {
+                    DataService.dataService.createNewPledge(m, days: d)
+                }
+                DataService.dataService.updateCounter(d)
+                self.addedPledgeAlert()
+            } else {
+                self.addPledgeAlert("Oops!", message: "Please select perid and days first")
+            }
         }
     }
     

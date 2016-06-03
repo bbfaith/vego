@@ -31,51 +31,56 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createAccount(sender: AnyObject) {
-        let username = usernameField.text
-        let email = emailField.text
-        let password = passwordField.text
-        let passwordConfirm = passwordConfirmField.text
-        
-        if username != "" && email != "" && password != "" && passwordConfirm != "" {
-            // If re-entered password does not match
-            guard password == passwordConfirm else {
-                self.signupErrorAlert("Oops!", message: "The re-entered password doesn't match. Try again.")
-                return
-            }
-            
-            // Set Email and Password for the New User.
-            DataService.dataService.BASE_REF.createUser(email, password: password, withValueCompletionBlock: { error, result in
-                
-                if error != nil {
-                    
-                    // There was a problem.
-                    self.signupErrorAlert("Oops!", message: "Having some trouble creating your account. Try again.")
-                    
-                } else {
-                    
-                    // Create and Login the New User with authUser
-                    DataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: {
-                        err, authData in
-                        
-                        let user = ["provider": authData.provider!, "email": email!, "username": username!]
-                        
-                        // Seal the deal in DataService.swift.
-                        DataService.dataService.createNewAccount(authData.uid, user: user)
-                    })
-                    
-                    // Store the uid for future access - handy!
-                    NSUserDefaults.standardUserDefaults().setValue(result ["uid"], forKey: "uid")
-                    
-                    // Enter the app.
-                    self.performSegueWithIdentifier("NewUserLoggedIn", sender: nil)
-                }
-            })
-            
-        } else if password == passwordConfirm {
-            signupErrorAlert("Oops!", message: "The second password is different. Try again.")
-            
+        // Check internet connection first
+        if Reachability.isConnectedToNetwork() == false {
+            self.signupErrorAlert("Oops!", message: "You need to connect to the internet first.")
         } else {
-            signupErrorAlert("Oops!", message: "Don't forget to enter your email, password, and a username.")
+            let username = usernameField.text
+            let email = emailField.text
+            let password = passwordField.text
+            let passwordConfirm = passwordConfirmField.text
+            
+            if username != "" && email != "" && password != "" && passwordConfirm != "" {
+                // If re-entered password does not match
+                guard password == passwordConfirm else {
+                    self.signupErrorAlert("Oops!", message: "The re-entered password doesn't match. Try again.")
+                    return
+                }
+                
+                // Set Email and Password for the New User.
+                DataService.dataService.BASE_REF.createUser(email, password: password, withValueCompletionBlock: { error, result in
+                    
+                    if error != nil {
+                        
+                        // There was a problem.
+                        self.signupErrorAlert("Oops!", message: "Having some trouble creating your account. Try again.")
+                        
+                    } else {
+                        
+                        // Create and Login the New User with authUser
+                        DataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: {
+                            err, authData in
+                            
+                            let user = ["provider": authData.provider!, "email": email!, "username": username!]
+                            
+                            // Seal the deal in DataService.swift.
+                            DataService.dataService.createNewAccount(authData.uid, user: user)
+                        })
+                        
+                        // Store the uid for future access - handy!
+                        NSUserDefaults.standardUserDefaults().setValue(result ["uid"], forKey: "uid")
+                        
+                        // Enter the app.
+                        self.performSegueWithIdentifier("NewUserLoggedIn", sender: nil)
+                    }
+                })
+                
+            } else if password == passwordConfirm {
+                signupErrorAlert("Oops!", message: "The second password is different. Try again.")
+                
+            } else {
+                signupErrorAlert("Oops!", message: "Don't forget to enter your email, password, and a username.")
+            }
         }
     }
     

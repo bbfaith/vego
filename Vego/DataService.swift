@@ -71,7 +71,6 @@ class DataService {
             "pledged_days": String(days),
             "start_date": startDate,
             "end_date": endDate]
-        
         CURRENT_USER_REF.childByAppendingPath("pledge").setValue(pledge)
     }
     

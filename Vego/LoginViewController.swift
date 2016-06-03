@@ -62,27 +62,33 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tryLogin(sender: AnyObject) {
-        let email = emailField.text
-        let password = passwordField.text
-        
-        if email != "" && password != "" {
-            // Login with the Firebase's authUser method
-            DataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
-                
-                if error != nil {
-                    self.loginErrorAlert("Oops!", message: "Check your username and password.")
-                } else {
-                    // Be sure the correct uid is stored.
-                    NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
-                    
-                    // Enter the app!
-                    self.performSegueWithIdentifier("CurrentlyLoggedIn", sender: nil)
-                }
-            })
-            
+        // Check internet connection first
+        if Reachability.isConnectedToNetwork() == false {
+            self.loginErrorAlert("Oops!", message: "You need to connect to the internet first.")
         } else {
-            // There was a problem logging in
-            loginErrorAlert("Oops!", message: "Don't forget to enter your email and password.")
+            let email = emailField.text
+            let password = passwordField.text
+            
+            if email != "" && password != "" {
+                // Login with the Firebase's authUser method
+                DataService.dataService.BASE_REF.authUser(email, password: password, withCompletionBlock: { error, authData in
+                    
+                    if error != nil {
+                        print(error)
+                        self.loginErrorAlert("Oops!", message: "Check your username and password.")
+                    } else {
+                        // Be sure the correct uid is stored.
+                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: "uid")
+                        
+                        // Enter the app!
+                        self.performSegueWithIdentifier("CurrentlyLoggedIn", sender: nil)
+                    }
+                })
+                
+            } else {
+                // There was a problem logging in
+                loginErrorAlert("Oops!", message: "Don't forget to enter your email and password.")
+            }
         }
     }
     

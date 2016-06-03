@@ -20,8 +20,8 @@ class RecipeDetailTableViewController: UITableViewController {
     // NOTE: Each key can only request 25 times a day!
     // NOTE: Load recipe list takes 1 request, load 1 recipe detail takes 2 requests
     
-    let apiKey = "1JObxXXpNUmshOiPtCcYhfb6KccCp1nqQrOjsnagwQM0hBauQQ"
-//    let apiKey = "QwPr6RIpx7mshbB4zoCIIjSNc9K4p1Ai09vjsncXNLqX7uvX3J"
+//    let apiKey = "1JObxXXpNUmshOiPtCcYhfb6KccCp1nqQrOjsnagwQM0hBauQQ"
+    let apiKey = "QwPr6RIpx7mshbB4zoCIIjSNc9K4p1Ai09vjsncXNLqX7uvX3J"
     let apiBaseURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?"
     var id = 568604
     var image: UIImage?
@@ -31,7 +31,13 @@ class RecipeDetailTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 200.0
         tableView.rowHeight = UITableViewAutomaticDimension
         recipeDefaultImage.image = image
-        requestRecipe(id)
+        
+        // Check internet connection first
+        if Reachability.isConnectedToNetwork() == false {
+            self.recipeErrorAlert("Oops", message: "You are not connected to the internet. Data cannot display correctly.")
+        } else {
+            requestRecipe(id)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -143,5 +149,29 @@ class RecipeDetailTableViewController: UITableViewController {
         task.resume()
     }
     
-
+    func fetchImage(imgurl: String){
+        let url = NSURL(string: imgurl)
+        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: url!)
+        request.timeoutInterval = 20
+        
+        let task = session.dataTaskWithRequest(request) {
+            (let data, let response, let error) in
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                if let data = data {
+                    self.recipeDefaultImage.image = UIImage(data: data)
+                }
+            }
+        }
+        task.resume()
+    }
+    
+    func recipeErrorAlert(title: String, message: String) {
+        // Called upon signup error to let the user know signup didn't work.
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
 }

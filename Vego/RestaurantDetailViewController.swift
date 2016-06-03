@@ -19,7 +19,7 @@ class RestaurantDetailViewController: UITableViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
   
-    var restaurant: Restaurant?
+    var restaurant: RestaurantModel?
     
     var latitude: String?
     
@@ -57,14 +57,25 @@ class RestaurantDetailViewController: UITableViewController {
     }
 
     @IBAction func getDirections(sender: AnyObject) {
-        print("\(latitude),\(longitude)")
-        var urlString = "http:/maps.google.com/maps?"
-        urlString += "saddr=\(latitude!),\(longitude!)"
-        urlString += "&daddr=\(restaurant!.latitude!),\(restaurant!.longitude!)"
-        
-        if let url = NSURL(string: urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!) {
-            UIApplication.sharedApplication().openURL(url)
+        // Check internet connection first
+        if Reachability.isConnectedToNetwork() == false {
+            self.restaurantErrorAlert("Oops", message: "You need to connect to the internet first.")
+        } else {
+            var urlString = "http:/maps.google.com/maps?"
+            urlString += "saddr=\(latitude!),\(longitude!)"
+            urlString += "&daddr=\(restaurant!.latitude!),\(restaurant!.longitude!)"
+            
+            if let url = NSURL(string: urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!) {
+                UIApplication.sharedApplication().openURL(url)
+            }
         }
     }
-
+    
+    func restaurantErrorAlert(title: String, message: String) {
+        // Called upon signup error to let the user know signup didn't work.
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
+    }
 }

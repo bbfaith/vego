@@ -12,7 +12,7 @@
 		004589901CF13B5F001F8E91 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0045898F1CF13B5F001F8E91 /* HomeViewController.swift */; };
 		004589921CF1852D001F8E91 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */; };
 		004589B41CF2C685001F8E91 /* Recability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004589B31CF2C685001F8E91 /* Recability.swift */; };
-		004589B81CF2E427001F8E91 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004589B71CF2E427001F8E91 /* Restaurant.swift */; };
+		004589B81CF2E427001F8E91 /* RestaurantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004589B71CF2E427001F8E91 /* RestaurantModel.swift */; };
 		00F9CC501CF864B50025F757 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F9CC4F1CF864B50025F757 /* Firebase.framework */; };
 		00F9CC531CF866D70025F757 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F9CC511CF865A90025F757 /* libicucore.tbd */; };
 		00F9CC551CF866E90025F757 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00F9CC541CF866E90025F757 /* libc++.tbd */; };
@@ -119,7 +119,7 @@
 		0045898F1CF13B5F001F8E91 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		004589B31CF2C685001F8E91 /* Recability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recability.swift; sourceTree = "<group>"; };
-		004589B71CF2E427001F8E91 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		004589B71CF2E427001F8E91 /* RestaurantModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
 		00F9CC4F1CF864B50025F757 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
 		00F9CC511CF865A90025F757 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		00F9CC541CF866E90025F757 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -452,7 +452,7 @@
 				0045898B1CF099DA001F8E91 /* RestaurantTableViewController.swift */,
 				004589911CF1852D001F8E91 /* RestaurantDetailViewController.swift */,
 				0045898D1CF0A061001F8E91 /* RestaurantCell.swift */,
-				004589B71CF2E427001F8E91 /* Restaurant.swift */,
+				004589B71CF2E427001F8E91 /* RestaurantModel.swift */,
 				00F9CCB51CF88C6F0025F757 /* PledgeViewController.swift */,
 				00F9CCB71CF88C6F0025F757 /* SignUpViewController.swift */,
 				00F9CCB81CF88C6F0025F757 /* TextField.swift */,
@@ -691,7 +691,7 @@
 				B5CBE0001CFAA60000216D8F /* FSCalendar+Deprecated.m in Sources */,
 				004589901CF13B5F001F8E91 /* HomeViewController.swift in Sources */,
 				00F9CCB91CF88C6F0025F757 /* AddPledgeViewController.swift in Sources */,
-				004589B81CF2E427001F8E91 /* Restaurant.swift in Sources */,
+				004589B81CF2E427001F8E91 /* RestaurantModel.swift in Sources */,
 				00F9CC5D1CF8679E0025F757 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

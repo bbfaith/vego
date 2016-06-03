@@ -21,29 +21,35 @@ class RecipeTableViewController: UITableViewController {
     
     let group = dispatch_group_create()
     let cellSpacingHeight: CGFloat = 5
+    @IBOutlet weak var errorImage: UIImageView!
     
     // API keys.
     // NOTE: Each key can only request 25 times a day!
     // NOTE: Load recipe list takes 1 request, load 1 recipe detail takes 2 requests
     
-    let apiKey = "1JObxXXpNUmshOiPtCcYhfb6KccCp1nqQrOjsnagwQM0hBauQQ"
-//    let apiKey = "QwPr6RIpx7mshbB4zoCIIjSNc9K4p1Ai09vjsncXNLqX7uvX3J"
+//    let apiKey = "1JObxXXpNUmshOiPtCcYhfb6KccCp1nqQrOjsnagwQM0hBauQQ"
+    let apiKey = "QwPr6RIpx7mshbB4zoCIIjSNc9K4p1Ai09vjsncXNLqX7uvX3J"
     
     let apiBaseURL = "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/search?"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        dispatch_group_enter(self.group)
-        dispatch_group_async(self.group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), {
-            self.performRequest()
-        })
-        dispatch_group_wait(self.group, DISPATCH_TIME_FOREVER)
-        self.reloadInputViews()
+        
+        // Check internet connection first
+        if Reachability.isConnectedToNetwork() == false {
+            errorImage.hidden = false
+        } else {
+            dispatch_group_enter(self.group)
+            dispatch_group_async(self.group, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), {
+                self.performRequest()
+            })
+            dispatch_group_wait(self.group, DISPATCH_TIME_FOREVER)
+            self.reloadInputViews()
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Animate list
@@ -144,6 +150,7 @@ class RecipeTableViewController: UITableViewController {
                             }
                         }
                     }
+                    self.viewWillAppear(true)
                     dispatch_group_leave(self.group)
                 } catch {
                     print("Cannot load json correctly. error: \(error)")
@@ -168,7 +175,6 @@ class RecipeTableViewController: UITableViewController {
             self.imgInfo[index].image = UIImage(data: data!)!
         }
         self.tableView.reloadData()
-        self.viewWillAppear(true)
         dispatch_group_leave(self.group)
     }
 

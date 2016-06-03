@@ -10,7 +10,6 @@ import UIKit
 import CoreLocation
 
 class RestaurantTableViewController: UITableViewController, CLLocationManagerDelegate {
-    
 
     @IBOutlet weak var errorImage: UIImageView!
     
@@ -20,7 +19,7 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     
     let lManager = CLLocationManager()
     
-    var restaurantData = [Restaurant]()
+    var restaurantData = [RestaurantModel]()
     
     var thumbImages = [Int: UIImage]()
     
@@ -46,17 +45,19 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator()
-        
-        lManager.delegate = self
-        lManager.desiredAccuracy = kCLLocationAccuracyBest
         
         // Check internet connection first
         if Reachability.isConnectedToNetwork() == false {
-            self.indicator.stopAnimating()
             self.errorImage.hidden = false
             self.errorImage.image = UIImage(named: "no_connection")
         } else {
+            // Loading indicator
+            activityIndicator()
+            
+            // Catch location
+            lManager.delegate = self
+            lManager.desiredAccuracy = kCLLocationAccuracyBest
+            
             // Preserve selection between presentations
             self.clearsSelectionOnViewWillAppear = false
             // Retrieve data based on location
@@ -226,7 +227,7 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
                         for aData in restaurantsJson {
                             // Set each restaurant data
                                 let aRestaurantJson = aData["restaurant"] as! NSDictionary
-                                let aRestaurant = Restaurant(aRestaurantJson: aRestaurantJson)
+                                let aRestaurant = RestaurantModel(aRestaurantJson: aRestaurantJson)
                                 self.restaurantData.append(aRestaurant)
                                 count += 1
                         }
@@ -247,6 +248,8 @@ class RestaurantTableViewController: UITableViewController, CLLocationManagerDel
             thumbImages[index] = UIImage(data: data)
         }
     }
+    
+    // MARK: - Location capture
     
     func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {

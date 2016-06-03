@@ -25,20 +25,24 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     @IBAction func sign(sender: AnyObject) {
         // If the user already checked in today
         if(datesWCheckedIn.containsObject(calendar.stringFromDate(NSDate()))){
-            let alert = UIAlertController(title: "Hey!", message: "You already checked today!", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Done", style: UIAlertActionStyle.Cancel, handler:nil))
-            alert.view.setNeedsLayout()
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.calendarErrorAlert("Oops", message: "You already checked in today.")
+            checkInButton.enabled = false
         } else {
             // Set and format of date
             let currentDateString = calendar.stringFromDate(NSDate())
             
             // Update info on the view
             dayInfo.text = "Well Done!"
+            monthInfo.text = "You've checked " + String(count) + (count < 2 ? " day" : " days") + " this month!"
             self.calendar.reloadData()
             
-            // Upload checked date to database
-            DataService.dataService.createDate(currentDateString)
+            if Reachability.isConnectedToNetwork() == false {
+                self.calendarErrorAlert("Oops", message: "You are not connected to the internet. Data cannot uploaded")
+            } else {
+                // Upload checked date to database
+                DataService.dataService.createDate(currentDateString)
+                checkInButton.enabled = false
+            }
         }
     }
     
@@ -55,13 +59,14 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
                 }
                 // Update info on the view
                 self.calendar.reloadData()
-                print(self.datesWCheckedIn)
                 self.countMonth(NSDate())
                 self.monthInfo.text = "You've checked " + String(self.count) + (self.count < 2 ? " day" : " days") + " this month!"
                 
                 // If the user already checked in today
                 if(self.datesWCheckedIn.containsObject(self.calendar.stringFromDate(NSDate()))){
                     self.checkInButton.enabled = false
+                } else {
+                    self.checkInButton.enabled = true
                 }
             }
         })
@@ -69,8 +74,15 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Fetch checked dates from database
-        fetchDates()
+        
+        // Check internet connection first
+        if Reachability.isConnectedToNetwork() == false {
+            self.calendarErrorAlert("Oops", message: "You are not connected to the internet. Data cannot display correctly.")
+        } else {
+            // Fetch checked dates from database
+            fetchDates()
+        }
+        
         self.dayInfo.text = ""
     }
     
@@ -82,7 +94,18 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
             }
         }
     }
-
+    
+    func addDaystoGivenDate(baseDate:NSDate, NumberOfDaysToAdd:Int)->NSDate
+    {
+        let dateComponents = NSDateComponents()
+        let CurrentCalendar = NSCalendar.currentCalendar()
+        let CalendarOption = NSCalendarOptions()
+        
+        dateComponents.day = NumberOfDaysToAdd
+        
+        let newDate = CurrentCalendar.dateByAddingComponents(dateComponents, toDate: baseDate, options: CalendarOption)
+        return newDate!
+    }
     
     // Set the minimum display day for the calendar
     func minimumDateForCalendar(calendar: FSCalendar) -> NSDate {
@@ -126,6 +149,14 @@ class CalendarViewController: UIViewController, FSCalendarDataSource, FSCalendar
         let imageName = "veg" + String(arc4random_uniform(UInt32(31)) + 1)
         return datesWCheckedIn.containsObject(calendar.stringFromDate(date)) ? UIImage(named: imageName) : nil
         
+    }
+    
+    func calendarErrorAlert(title: String, message: String) {
+        // Called upon signup error to let the user know signup didn't work.
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        alert.addAction(action)
+        presentViewController(alert, animated: true, completion: nil)
     }
 }
 
