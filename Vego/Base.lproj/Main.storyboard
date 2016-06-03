@@ -1109,7 +1109,7 @@
         <image name="plant2.png" width="166" height="275"/>
         <image name="profile.jpg" width="800" height="534"/>
         <image name="recipe-default-image.jpg" width="320" height="320"/>
-        <image name="recipe.png" width="500" height="500"/>
+        <image name="recipe.png" width="415" height="415"/>
         <image name="restaurant.png" width="415" height="415"/>
         <image name="restaurantBkg.jpg" width="2220" height="1481"/>
         <image name="submitButton.png" width="214" height="74"/>
